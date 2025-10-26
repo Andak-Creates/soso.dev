@@ -5,6 +5,19 @@
   --foreground: #171717;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  font-family: GeistSans, "GeistSans Fallback", system-ui, sans-serif;
+}
+
+* {
+  transition: all 300ms ease;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -20,7 +33,24 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.fadedText {
+  @apply text-[#868686];
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+.group:hover .animate-wave-on-hover {
+  animation: wave 0.6s ease-in-out infinite;
 }
