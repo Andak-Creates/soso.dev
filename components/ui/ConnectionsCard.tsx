@@ -297,7 +297,7 @@ const ConnectionsCard = () => {
                   <Image
                     className="rounded-full object-cover"
                     alt="Connection"
-                    src="/image1.jpg"
+                    src="/avatars/image1.jpg"
                     fill
                   />
                 </div>
@@ -305,7 +305,7 @@ const ConnectionsCard = () => {
                   <Image
                     className="rounded-full object-cover"
                     alt="Connection"
-                    src="/image2.jpg"
+                    src="/avatars/image2.jpg"
                     fill
                   />
                 </div>
@@ -313,7 +313,7 @@ const ConnectionsCard = () => {
                   <Image
                     className="rounded-full object-cover"
                     alt="Connection"
-                    src="/image3.jpg"
+                    src="/avatars/image3.jpg"
                     fill
                   />
                 </div>
@@ -321,7 +321,7 @@ const ConnectionsCard = () => {
                   <Image
                     className="rounded-full object-cover"
                     alt="Connection"
-                    src="/image4.jpg"
+                    src="/avatars/image4.jpg"
                     fill
                   />
                 </div>

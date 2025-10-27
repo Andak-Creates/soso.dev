@@ -43,19 +43,67 @@ const NavBar = () => {
     };
   }, [lastScrollY]);
 
+  // open side bar state
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
-        showNav ? "translate-y-0" : "-translate-y-full"
+        showNav ? "translate-y-0" : "md:-translate-y-full"
       } flex justify-between items-center py-5 px-6 border-b bg-black/70 backdrop-blur-sm`}
     >
       {/* Logo */}
       <div>Logo</div>
 
       {/* burger */}
-      <div className="w-[50px] md:hidden relative flex flex-col gap-2 items-end">
-        <div className="h-0.5 w-full bg-white"></div>
-        <div className="h-0.5 w-[70%] bg-white"></div>
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className=" h-6 flex justify-center items-center cursor-pointer"
+      >
+        <button
+          className={`w-[50px] md:hidden relative  flex flex-col cursor-pointer
+      gap-2 items-end`}
+        >
+          <div
+            className={`h-0.5  bg-white ${
+              isOpen
+                ? "rotate-40 w-[70%] absolute  top-1/2 -translate-y-1/2 "
+                : "w-full rotate-0"
+            }`}
+          ></div>
+          <div
+            className={`h-0.5 w-[70%] bg-white ${
+              isOpen ? "-rotate-40  top-1/2 -translate-y-1/2 " : "rotate-0"
+            }
+          `}
+          ></div>
+        </button>
+      </div>
+
+      {/* Side bar */}
+      <div
+        className={`fixed top-0 right-0 h-screen w-full bg-black -z-10 px-6 flex items-center
+             transition-transform duration-300 ${
+               isOpen ? "translate-x-0 fixed" : "translate-x-full"
+             }`}
+      >
+        <div className="flex flex-col gap-10 w-full">
+          {tabs.map((tab) => (
+            <Link
+              onClickCapture={() => setIsOpen(false)}
+              key={tab.name}
+              href={tab.href}
+              className={`w-full  ${
+                activeTab === tab.name
+                  ? "font-semibold text-white"
+                  : "  fadedText"
+              }`}
+              onClick={() => setActiveTab(tab.name)}
+            >
+              {tab.name}
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* Nav Menu */}

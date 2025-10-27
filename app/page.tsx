@@ -12,7 +12,7 @@ const page = () => {
         {/* Image Holder */}
         <div className="relative h-[130px] w-[130px] rounded-full overflow-hidden border-4">
           <Image
-            src={"/profilePic.png"}
+            src={"/avatars/profilePic.png"}
             alt="profile Image"
             fill
             className="object-cover rounded-full"

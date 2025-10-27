@@ -50,7 +50,33 @@ const Footer = () => {
       </div>
 
       {/* Links */}
-      <div>this is my link bitch</div>
+      <div className="flex flex-row justify-between border-t border-[#aaa] md:border-none pt-10 ">
+        {/* General */}
+        <div>
+          <h2 className="font-semibold">General</h2>
+          <div className="flex flex-col gap-4 mt-3 text-[#aaa]">
+            <Link href={"/"}>Home</Link>
+
+            <Link href={"/"}>About</Link>
+
+            <Link href={"/"}>Projects</Link>
+
+            <Link href={"/"}>Music</Link>
+          </div>
+        </div>
+
+        {/* Specific links */}
+        <div>
+          <h2 className="font-semibold">Specifics</h2>
+          <div className="flex flex-col gap-4 mt-3 text-[#aaa]">
+            <Link href={"/"}>Toolbox</Link>
+
+            <Link href={"/"}>Music</Link>
+
+            <Link href={"/"}>Community Wall</Link>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

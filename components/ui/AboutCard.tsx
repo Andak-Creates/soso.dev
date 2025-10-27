@@ -52,7 +52,7 @@ const AboutCard = () => {
             <div className="p-2 bg-white border rounded-lg h-[500px]">
               <div className="w-40 h-[300px] bg-black p-2 rounded-lg relative shrink-0">
                 <Image
-                  src={"/image1.jpg"}
+                  src={"/avatars/image1.jpg"}
                   alt="profile image"
                   fill
                   className="object-cover rotate-6 scale-[1.1] -mt-2.5 lg:scale-[1] lg:group-hover:rotate-4 lg:group-hover:scale-[1.1] rounded-lg transition-all duration-500"

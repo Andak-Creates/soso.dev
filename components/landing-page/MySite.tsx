@@ -639,8 +639,8 @@ const MySite = () => {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-white" />
-                <div className="absolute bottom-6 left-6 z-50 grid h-full grid-cols-2 grid-rows-2 items-end gap-8">
+                <div className="absolute inset-0 h-full w-full bg-linear-to-t from-white" />
+                <div className="absolute bottom-6 left-6 z-5 grid h-full grid-cols-2 grid-rows-2 items-end gap-8">
                   <div className="col-1 row-start-2 text-balance">
                     <h2 className="mb-2 font-semibold text-black">My Music</h2>
                     <p className="text-[#3a3939]">
