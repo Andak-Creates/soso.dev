@@ -5,8 +5,16 @@ const AboutCard = () => {
   return (
     <div className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6">
       <Link href="/about" className="block">
-        <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden h-[275px] md:h-[304px] lg:h-[220px]">
-          <div className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
+        <div
+          className="group relative flex flex-col rounded-2xl border border-border-primary 
+        bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden h-[275px] md:h-[304px]
+         lg:h-[220px]"
+        >
+          <div
+            className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 items-center justify-center
+           rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out
+            group-hover:-translate-y-2 group-hover:rotate-0 group-hover:opacity-100"
+          >
             <svg
               className="h-6 w-6 text-indigo-600"
               width="24"
