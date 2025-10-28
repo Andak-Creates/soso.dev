@@ -44,7 +44,7 @@ const AboutSection = () => {
 
       // ✅ Clamp + speed control fix
       const clampedProgress = Math.max(0, Math.min(progress, 1));
-      const speedFactor = 0.72;
+      const speedFactor = 0.7;
       const slowedProgress = clampedProgress * speedFactor;
 
       setScrollProgress(slowedProgress);
@@ -69,7 +69,7 @@ const AboutSection = () => {
   const ballPosition = getBallPosition();
 
   return (
-    <div className="relative space-y-8 text-center px-[30px]">
+    <div className="relative space-y-8 text-center px-[30px] mt-[30px] mb-[100px]">
       <div className="space-y-4">
         <div
           className="relative w-full before:absolute before:top-0 before:h-px before:bg-border-primary/50
@@ -407,7 +407,7 @@ const AboutSection = () => {
         </div>
 
         {/* these days */}
-        <div className="grid grid-cols-1 gap-8 pr-12 lg:grid-cols-2 lg:items-center lg:justify-between xl:py-40">
+        <div className="grid grid-cols-1 gap-8 pr-12 lg:grid-cols-2 lg:items-center lg:justify-between">
           <div className="flex flex-col items-center text-left lg:order-2 lg:items-start">
             <div className="mb-8 lg:hidden">
               <div className="relative mx-auto w-fit">
@@ -437,7 +437,7 @@ const AboutSection = () => {
             <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
               these Days
             </h2>
-            <p className="mb-6 text-base leading-8 text-text-secondary">
+            <p className="mb-6 text-base leading-8 text-text-secondary z-10">
               Currently leading a team as a Frontend Engineer at TrueNorth
               Solutions where we are building some pretty awesome stuffs
             </p>

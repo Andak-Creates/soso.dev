@@ -2,6 +2,11 @@
 
 import AboutSection from "@/components/about-page/AboutSection";
 import ExperienceTimeline from "@/components/about-page/ExperienceTimeline";
+import CurrentlyReadingCard from "@/components/about-page/ui/CurrentlyReadingCard";
+import RecentFavoriteCard from "@/components/about-page/ui/RecentFavoriteCard";
+import ScrapBookCard from "@/components/about-page/ui/ScrapBookCard";
+import StatsCard from "@/components/about-page/ui/StatsCard";
+import ConnectionsCard from "@/components/ui/ConnectionsCard";
 import DraggableImages from "@/components/ui/DraggableImages";
 import { useEffect, useRef, useState } from "react";
 
@@ -77,6 +82,61 @@ function page() {
 
       {/* xperience */}
       <ExperienceTimeline />
+
+      {/* scrap book side */}
+      <section className="relative space-y-16 mt-[100px] mb-[50px]">
+        {/* Header */}
+        <div className="space-y-4">
+          <div
+            className="relative w-full before:absolute before:top-0 before:h-px
+           before:bg-border-primary/50 before:-left-4 before:-right-4 md:before:-left-8
+            md:before:-right-8 lg:before:inset-x-0 after:-left-4 after:-right-4
+             md:after:-left-8 md:after:-right-8 lg:after:inset-x-0 after:absolute after:bottom-0
+              after:h-px after:bg-border-primary/50"
+          >
+            <div className="text-center text-sm font-medium text-indigo-600">
+              <span>More</span>
+            </div>
+          </div>
+          <div
+            className="relative w-full before:absolute before:top-0
+           before:h-px before:bg-border-primary/50 before:-left-4 before:-right-4
+            md:before:-left-8 md:before:-right-8 lg:before:inset-x-0 after:-left-4 
+            after:-right-4 md:after:-left-8 md:after:-right-8 lg:after:inset-x-0
+             after:absolute after:bottom-0 after:h-px after:bg-border-primary/50"
+          >
+            <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary">
+              Here's what sets me apart and makes me unique
+            </h2>
+          </div>
+        </div>
+
+        {/* Grid Layout */}
+        <div
+          className="relative w-full px-[30px] before:absolute before:top-0 
+        before:h-px before:bg-border-primary/50 before:-left-4 before:-right-4 
+        md:before:-left-8 md:before:-right-8 lg:before:inset-x-0 after:-left-4 after:-right-4 
+        md:after:-left-8 md:after:-right-8 lg:after:inset-x-0 after:absolute after:bottom-0 after:h-px 
+        after:bg-border-primary/50"
+        >
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
+            {/* Recent Favorite - Music */}
+            <RecentFavoriteCard />
+
+            {/* Scrapbook */}
+            <ScrapBookCard />
+
+            {/* Currently Reading */}
+            <CurrentlyReadingCard />
+
+            {/* Connections */}
+            <ConnectionsCard />
+
+            {/* Stats */}
+            <StatsCard />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

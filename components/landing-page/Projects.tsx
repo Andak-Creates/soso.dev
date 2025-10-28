@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <section className="relative space-y-10 md:space-y-16 px-[30px] mt-[100px]">
+    <section className="relative space-y-10 md:space-y-16 px-[30px] my-[150px]">
       {/* Blog Section */}
       <div className="relative space-y-4 text-balance">
         <div

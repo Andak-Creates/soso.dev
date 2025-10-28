@@ -44,7 +44,13 @@ const MySite = () => {
           {/* Speaking Card */}
           <Link href="/speaking" className="block">
             <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[276px]">
-              <div className="absolute bottom-4 right-4 z-[999] flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
+              <div
+                className="absolute bottom-4 right-4 z-999
+               flex h-9 w-9 rotate-6 items-center justify-center 
+               rounded-full bg-indigo-200 opacity-0 transition-all
+                duration-300 ease-in-out group-hover:-translate-y-2 
+                group-hover:rotate-0 group-hover:opacity-100"
+              >
                 <svg
                   className="h-6 w-6 text-indigo-600"
                   width="24"
@@ -68,7 +74,7 @@ const MySite = () => {
                   />
                 </svg>
               </div>
-              <div className="pointer-events-none absolute inset-0 z-30 bg-gradient-to-tl from-indigo-400/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-0 z-30 bg-linear-to-tl from-indigo-400/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
 
               <div className="h-full">
                 {/* Circular rings SVG */}
@@ -469,7 +475,7 @@ const MySite = () => {
                         </defs>
                       </svg>
                       <Image
-                        className="absolute left-1/2 top-1/2 h-[64px] w-[64px] -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover"
+                        className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover"
                         alt="Speaker"
                         src="/avatars/image1.jpg"
                         width={64}
@@ -629,7 +635,7 @@ const MySite = () => {
                         </defs>
                       </svg>
                       <Image
-                        className="absolute left-1/2 top-1/2 h-[64px] w-[64px] -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover"
+                        className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover"
                         alt="Speaker"
                         src="/avatars/image3.jpg"
                         width={64}
@@ -654,8 +660,16 @@ const MySite = () => {
 
           {/* Community Wall Card */}
           <Link href="/community-wall" className="block">
-            <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[276px]">
-              <div className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
+            <div
+              className="group relative flex flex-col rounded-2xl border
+             border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[276px]"
+            >
+              <div
+                className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 
+              items-center justify-center rounded-full bg-indigo-200 opacity-0
+               transition-all duration-300 ease-in-out group-hover:-translate-y-2 
+               group-hover:rotate-0 group-hover:opacity-100"
+              >
                 <svg
                   className="h-6 w-6 text-indigo-600"
                   width="24"
@@ -682,7 +696,7 @@ const MySite = () => {
 
               <div
                 className="pointer-events-none absolute
-               inset-0 z-30 bg-gradient-to-tl from-indigo-400/20 via-transparent
+               inset-0 z-30 bg-linear-to-tl from-indigo-400/20 via-transparent
                 to-transparent opacity-0 transition-opacity duration-300 ease-in-out 
                 group-hover:opacity-100 "
               />

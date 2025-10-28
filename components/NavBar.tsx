@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const tabs = [
@@ -16,7 +17,15 @@ const NavBar = () => {
   type TabKey = (typeof tabs)[number]["name"];
   const [activeTab, setActiveTab] = React.useState<TabKey>("Home");
 
-  // State to track scroll
+  const pathname = usePathname();
+
+  // ✅ Set active tab based on current route
+  useEffect(() => {
+    const currentTab = tabs.find((tab) => tab.href === pathname);
+    if (currentTab) setActiveTab(currentTab.name);
+  }, [pathname]);
+
+  // Scroll hide/show logic
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -24,26 +33,15 @@ const NavBar = () => {
     const handleScroll = () => {
       if (typeof window === "undefined") return;
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setShowNav(true);
-      } else if (currentScrollY > lastScrollY + 10) {
-        // Scrolling down beyond threshold
-        setShowNav(false);
-      }
-
+      if (currentScrollY < lastScrollY) setShowNav(true);
+      else if (currentScrollY > lastScrollY + 10) setShowNav(false);
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // open side bar state
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -52,7 +50,6 @@ const NavBar = () => {
         showNav ? "translate-y-0" : "md:-translate-y-full"
       } flex justify-between items-center py-5 px-6 border-b bg-black/70 backdrop-blur-sm`}
     >
-      {/* Logo */}
       <div>Logo</div>
 
       {/* burger */}
@@ -74,13 +71,12 @@ const NavBar = () => {
           <div
             className={`h-0.5 w-[70%] bg-white ${
               isOpen ? "-rotate-40  top-1/2 -translate-y-1/2 " : "rotate-0"
-            }
-          `}
+            }`}
           ></div>
         </button>
       </div>
 
-      {/* Side bar */}
+      {/* Side Menu Mobile */}
       <div
         className={`fixed top-0 right-0 h-screen w-full bg-black -z-10 px-6 flex items-center
              transition-transform duration-300 ${
@@ -98,7 +94,6 @@ const NavBar = () => {
                   ? "font-semibold text-white"
                   : "  fadedText"
               }`}
-              onClick={() => setActiveTab(tab.name)}
             >
               {tab.name}
             </Link>
@@ -106,7 +101,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Nav Menu */}
+      {/* Navbar Desktop */}
       <div
         className="border rounded-3xl px-5 py-1.5
       hidden md:flex flex-row gap-10 "
@@ -118,26 +113,23 @@ const NavBar = () => {
             className={`${
               activeTab === tab.name ? "font-semibold" : "fadedText"
             }`}
-            onClick={() => setActiveTab(tab.name)}
           >
             {tab.name}
           </Link>
         ))}
       </div>
 
-      {/* Social Links */}
+      {/* Socials */}
       <div className="border rounded-3xl px-5 py-1.5 hidden md:flex flex-row gap-3 sm:hidden">
         <Link
-          href={
-            "https://www.instagram.com/soso.andak?igsh=MWNmOGRyZTgxdWZpaA%3D%3D&utm_source=qr"
-          }
+          href={"https://www.instagram.com/soso.andak"}
           className="text-[20px]"
         >
-          <FaInstagram />{" "}
+          <FaInstagram />
         </Link>
 
         <Link
-          href={"https://www.tiktok.com/@soso.andak?_t=ZS-90nmmXPBfLs&_r=1"}
+          href={"https://www.tiktok.com/@soso.andak"}
           className="text-[20px]"
         >
           <FaTiktok />
@@ -147,7 +139,7 @@ const NavBar = () => {
           href={"https://www.linkedin.com/in/kelvin-andakuro-2618b92bb"}
           className="text-[20px]"
         >
-          <FaLinkedin />{" "}
+          <FaLinkedin />
         </Link>
       </div>
     </div>

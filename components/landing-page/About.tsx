@@ -5,7 +5,7 @@ import ConnectionsCard from "../ui/ConnectionsCard";
 
 const About = () => {
   return (
-    <section className="relative space-y-10 md:space-y-16 px-[30px]">
+    <section className="relative space-y-10 md:space-y-16 px-[30px] my-[100px]">
       {/* About Section */}
       <div className="space-y-4">
         <div
@@ -52,9 +52,14 @@ const About = () => {
           {/* Toolbox Card */}
           <div className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7">
             <Link href="/toolbox" className="block">
-              <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden md:h-[304px] lg:h-[300px]">
+              <div
+                className="group relative flex flex-col rounded-2xl border border-border-primary 
+              bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden md:h-[304px] lg:h-[300px]"
+              >
                 <div
-                  className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out 
+                  className="absolute bottom-4 right-4 z-999 flex h-9 w-9 
+                  rotate-6 items-center justify-center rounded-full bg-indigo-200 
+                  opacity-0 transition-all duration-300 ease-in-out 
                 group-hover:translate-y-2 group-hover:rotate-0 group-hover:opacity-100"
                 >
                   <svg
@@ -218,8 +223,15 @@ const About = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden h-[220px]">
-                <div className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
+              <div
+                className="group relative flex flex-col rounded-2xl border border-border-primary
+               bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden h-[220px]"
+              >
+                <div
+                  className="absolute bottom-4 right-4 z-999 flex h-9 w-9 rotate-6 items-center 
+                justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out
+                 group-hover:-translate-y-2 group-hover:rotate-0 group-hover:opacity-100"
+                >
                   <svg
                     className="h-6 w-6 text-indigo-600"
                     width="24"
