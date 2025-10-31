@@ -22,7 +22,7 @@ const page = () => {
   ];
 
   return (
-    <div className="">
+    <div>
       <div className="my-[30px]">
         <h1 className="text-[30px] text-center md:w-[40%] md:mx-auto md:text-[50px]">
           A collection of my recent Projects.
@@ -34,7 +34,7 @@ const page = () => {
         {projects.map((project) => (
           <div key={project.id} className="px-10 md:px-[60px]">
             {/* Image */}
-            <div className="h-[250px] sm:h-[350px] md:h-[500px] lg:h-[650px] xl:h-[800px] w-full border rounded-3xl relative overflow-hidden">
+            <div className="h-[350px] sm:h-[400px] md:h-[500px] lg:h-[650px] xl:h-[800px] w-full border rounded-2xl relative overflow-hidden">
               <Image
                 src={project.image}
                 alt="project image"

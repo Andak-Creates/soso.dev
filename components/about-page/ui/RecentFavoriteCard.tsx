@@ -1,7 +1,19 @@
+"use client";
+
+import { useEffect } from "react";
 import CircularWavesSVG from "../svgs/CircularWavesSVG";
 import VinylRecordSVG from "../svgs/VinylRecordSVG";
+import { useSpotifyStore } from "@/store/useSpotifyStore";
 
 const RecentFavoriteCard = () => {
+  const { currentTrack, fetchCurrentTrack } = useSpotifyStore();
+
+  useEffect(() => {
+    fetchCurrentTrack();
+  }, [fetchCurrentTrack]);
+
+  const track = currentTrack;
+
   return (
     <div className="lg:col-span-3 lg:row-span-6">
       <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[300px] row-span-8 col-span-7">
@@ -13,31 +25,44 @@ const RecentFavoriteCard = () => {
               <h2 className="mb-2 text-base font-medium group-hover:text-black">
                 Recent Favorite
               </h2>
-              <p className="max-h-[150px] overflow-hidden text-base text-text-secondary">
-                <span className="line-clamp-4 text-ellipsis ">
-                  <span className="fadedText">I'm listening to</span>{" "}
-                  <a
-                    className="font-semibold group-hover:text-black"
-                    href="https://open.spotify.com/track/5hcRWT88VLlbhEMh4efCMy"
-                  >
-                    YAHWEH
-                  </a>{" "}
-                  <span className="fadedText">by</span>{" "}
-                  <a
-                    className="font-semibold group-hover:text-black"
-                    href="https://open.spotify.com/artist/3ONGmday8YN8AkbsRk01iL?si=FCVK7H1wRVa2CHjakkaqsA"
-                  >
-                    Lojay
-                  </a>{" "}
-                  <span className="fadedText">from the album</span>{" "}
-                  <a
-                    className="font-semibold group-hover:text-black"
-                    href="https://open.spotify.com/album/0qogcdzZgkdwcVGrtHho6G?si=cpZPCZ3CSo6YR06H_enlDw"
-                  >
-                    GANGSTER ROMANTIC
-                  </a>
-                </span>
-              </p>
+
+              {track ? (
+                <p className="max-h-[150px] overflow-hidden text-base text-text-secondary">
+                  <span className="line-clamp-4 text-ellipsis ">
+                    <span className="fadedText">I'm listening to</span>{" "}
+                    <a
+                      className="font-semibold group-hover:text-black"
+                      href={track.external_urls.spotify}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {track.name}
+                    </a>{" "}
+                    <span className="fadedText">by</span>{" "}
+                    <a
+                      className="font-semibold group-hover:text-black"
+                      href={track.artists?.[0]?.external_urls.spotify}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {track.artists?.[0]?.name}
+                    </a>{" "}
+                    <span className="fadedText">from the album</span>{" "}
+                    <a
+                      className="font-semibold group-hover:text-black"
+                      href={track.album.external_urls.spotify}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {track.album.name}
+                    </a>
+                  </span>
+                </p>
+              ) : (
+                <p className="text-sm text-gray-400">
+                  Loading recent favorite...
+                </p>
+              )}
             </div>
 
             {/* Vinyl Record SVG */}
@@ -46,7 +71,12 @@ const RecentFavoriteCard = () => {
             transition-all
              duration-300 group-hover:bottom-3"
             >
-              <VinylRecordSVG albumCover="https://zagaempire.com/wp-content/uploads/2023/03/Lojay-GANGSTER-ROMANTIC-EP.webp" />
+              <VinylRecordSVG
+                albumCover={
+                  track?.album?.images?.[0]?.url ||
+                  "https://placehold.co/200x200?text=Album"
+                }
+              />
             </div>
 
             {/* Album Cover - appears on hover */}
@@ -54,8 +84,10 @@ const RecentFavoriteCard = () => {
               <div
                 className="h-[210px] w-[210px] rounded-sm bg-cover bg-center shadow-md"
                 style={{
-                  backgroundImage:
-                    'url("https://zagaempire.com/wp-content/uploads/2023/03/Lojay-GANGSTER-ROMANTIC-EP.webp")',
+                  backgroundImage: `url("${
+                    track?.album?.images?.[0]?.url ||
+                    "https://placehold.co/200x200?text=Album"
+                  }")`,
                 }}
               />
             </div>
