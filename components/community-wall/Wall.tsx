@@ -1,4 +1,3 @@
-// components/CommunityWall.tsx
 "use client";
 
 import { useState, useRef } from "react";

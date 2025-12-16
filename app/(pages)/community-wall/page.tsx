@@ -1,9 +1,7 @@
-"use client";
-
 import Wall from "@/components/community-wall/Wall";
 import { supabase } from "@/utils/supabase";
 
-export const revalidate = 0; // Disable caching for this page
+export const dynamic = "force-dynamic";
 
 async function getMessages() {
   const { data, error } = await supabase
