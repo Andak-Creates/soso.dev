@@ -1,3 +1,5 @@
+"use client";
+
 import Wall from "@/components/community-wall/Wall";
 import { supabase } from "@/utils/supabase";
 
