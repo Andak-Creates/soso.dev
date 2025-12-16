@@ -1,10 +1,10 @@
 import Wall from "@/components/community-wall/Wall";
-import { supabase } from "@/utils/supabase";
+import { supabaseServer } from "@/utils/supabase/server";
 
 export const dynamic = "force-dynamic";
 
 async function getMessages() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseServer
     .from("community_messages")
     .select("*")
     .order("created_at", { ascending: false })

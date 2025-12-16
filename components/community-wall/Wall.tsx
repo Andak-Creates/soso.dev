@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { Message } from "@/utils/supabase";
 import MessageCard from "./MessageCard";
 import AddMessageModal from "./AddMessageModal";
+import { Message } from "@/utils/supabase/type";
 
 interface CommunityWallProps {
   initialMessages: Message[];
