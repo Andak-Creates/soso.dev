@@ -105,7 +105,7 @@ export default function Wall({ initialMessages }: CommunityWallProps) {
   return (
     <>
       {/* Mobile View */}
-      <div className="block min-h-screen md:hidden">
+      <div className="block md:hidden">
         <div className="flex flex-wrap justify-center gap-12 p-6 pb-40">
           {messages.map((message, index) => (
             <MessageCard
@@ -115,7 +115,7 @@ export default function Wall({ initialMessages }: CommunityWallProps) {
             />
           ))}
         </div>
-        <div className="pointer-events-none sticky bottom-0 -mt-40 mb-8 flex h-32 items-end justify-center bg-gradient-to-b from-transparent to-gray-200 pb-8">
+        <div className="pointer-events-none sticky bottom-0 -mt-40 mb-8 flex h-32 items-end justify-center bg-linear-to-b from-transparent to-[#5050fa2e] pb-8">
           <button
             onClick={() => setShowModal(true)}
             className="group pointer-events-auto flex h-[60px] w-[60px] items-center justify-center rounded-full bg-gray-900 shadow-lg transition-transform hover:scale-110"

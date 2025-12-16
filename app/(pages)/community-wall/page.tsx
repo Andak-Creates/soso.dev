@@ -22,7 +22,7 @@ export default async function CommunityWallPage() {
   const messages = await getMessages();
 
   return (
-    <div className="min-h-screen">
+    <div className="block">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold  mb-3">
