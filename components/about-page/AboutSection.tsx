@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import AboutImage from "./ui/AboutImage";
 
 const AboutSection = () => {
   const pathRef = useRef<SVGPathElement>(null);
@@ -261,33 +262,12 @@ const AboutSection = () => {
 
         {/* Story Cards */}
         {/* coding origin */}
-        <div className="grid grid-cols-1 gap-8 py-12 pr-12 lg:grid-cols-2 lg:items-center lg:justify-between lg:py-20 xl:py-32">
+        <div className="grid grid-cols-1 gap-8 py-12 mx:pr-12 lg:grid-cols-2 lg:items-center lg:justify-between lg:py-20 xl:py-32">
           <div className="flex flex-col items-center text-left lg:order-2 lg:items-start">
-            <div className="mb-8 lg:hidden">
-              <div className="relative mx-auto w-fit">
-                <div className="group inline-block text-center">
-                  <div
-                    className="rounded-[20px] border border-border-primary p-2"
-                    style={{ width: 188, height: 278 }}
-                  >
-                    <div
-                      className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
-                      style={{
-                        boxShadow:
-                          "rgba(165, 174, 184, 0.32) 0px 2px 1.5px 0px inset",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-                <Image
-                  className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[-8deg] rounded-lg object-cover shadow"
-                  alt="A headshot"
-                  src="/avatars/image1.jpg"
-                  width={180}
-                  height={270}
-                />
-              </div>
-            </div>
+            {/* Images */}
+            <AboutImage img="/avatars/image1.jpg" />
+
+            {/* Content */}
             <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
               My programming origins
             </h2>
@@ -295,9 +275,9 @@ const AboutSection = () => {
               Sometime in 2019, I watched someone style their HTML using CSS at
               a barbing salon and I was amazed at how simple lines of code could
               transform something plain into something visually appealing. I
-              became curious and asked him to explain what he was doing. That
-              moment sparked my interest in the world of development I knew then
-              that I wanted to learn this “coding” thing too.
+              became curious and asked him to explain what he . That moment
+              sparked my interest in the world of development I knew then that I
+              wanted to learn this “coding” thing too.
             </p>
 
             <p className="mb-6 text-base leading-8 text-text-secondary">
@@ -310,6 +290,7 @@ const AboutSection = () => {
           </div>
 
           <div className="hidden lg:order-1 lg:block">
+            {/* Image */}
             <div className="relative mx-auto w-fit">
               <div className="group inline-block text-center">
                 <div
@@ -339,31 +320,10 @@ const AboutSection = () => {
         {/* Life beyond coding */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:justify-between lg:pl-12 lg:mb-[140px]">
           <div className="flex flex-col items-center text-left lg:items-start">
-            <div className="mb-8 lg:hidden">
-              <div className="relative mx-auto w-fit">
-                <div className="group inline-block text-center">
-                  <div
-                    className="rounded-[20px] border border-border-primary p-2"
-                    style={{ width: 188, height: 278 }}
-                  >
-                    <div
-                      className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
-                      style={{
-                        boxShadow:
-                          "rgba(165, 174, 184, 0.32) 0px 2px 1.5px 0px inset",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-                <Image
-                  className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow"
-                  alt="Speaking at C3 Conf!"
-                  src="/avatars/image2.jpg"
-                  width={180}
-                  height={270}
-                />
-              </div>
-            </div>
+            {/* Image */}
+            <AboutImage img="/avatars/image1.jpg" />
+
+            {/* content */}
             <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
               Life Beyond Code
             </h2>
@@ -409,31 +369,10 @@ const AboutSection = () => {
         {/* these days */}
         <div className="grid grid-cols-1 gap-8 pr-12 lg:grid-cols-2 lg:items-center lg:justify-between">
           <div className="flex flex-col items-center text-left lg:order-2 lg:items-start">
-            <div className="mb-8 lg:hidden">
-              <div className="relative mx-auto w-fit">
-                <div className="group inline-block text-center">
-                  <div
-                    className="rounded-[20px] border border-border-primary p-2"
-                    style={{ width: 188, height: 278 }}
-                  >
-                    <div
-                      className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
-                      style={{
-                        boxShadow:
-                          "rgba(165, 174, 184, 0.32) 0px 2px 1.5px 0px inset",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-                <Image
-                  className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[-8deg] rounded-lg object-cover shadow"
-                  alt="A headshot"
-                  src="/avatars/image1.jpg"
-                  width={180}
-                  height={270}
-                />
-              </div>
-            </div>
+            {/* Image */}
+            <AboutImage img="/avatars/image1.jpg" />
+
+            {/* Content */}
             <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
               these Days
             </h2>

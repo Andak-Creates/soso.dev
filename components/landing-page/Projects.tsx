@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <section className="relative space-y-10 md:space-y-16 px-[30px] my-[150px]">
+    <section className="relative space-y-10 md:space-y-16 px-3 md:px-[30px] my-[150px]">
       {/* Blog Section */}
       <div className="relative space-y-4 text-balance">
         <div
@@ -45,13 +45,13 @@ const Projects = () => {
           <ul className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
             <li className="flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2">
               <Link
-                className="flex h-full flex-col rounded-2xl"
+                className="flex h-full flex-col rounded-2xl group overflow-hidden"
                 href="/blog/the-only-nextjs-favicon-guide-youll-need"
               >
-                <div className="relative w-full h-[280px] md:h-[225px]">
+                <div className="relative w-full h-[280px] md:h-[225px]  overflow-hidden">
                   <Image
                     alt="a ship cruise website"
-                    className="rounded-2xl object-cover"
+                    className="rounded-2xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     src="/projects/cruise-ship.jpeg"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -71,13 +71,13 @@ const Projects = () => {
 
             <li className=" flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2">
               <Link
-                className="flex h-full flex-col rounded-2xl"
+                className="flex h-full flex-col rounded-2xl group overflow-hidden"
                 href="/blog/introducing-blogfolio-v5"
               >
-                <div className="relative w-full h-[280px] md:h-[225px]">
+                <div className="relative w-full h-[280px] md:h-[225px] overflow-hidden">
                   <Image
                     alt="Brgest realestate website"
-                    className="rounded-2xl object-cover"
+                    className="rounded-2xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     src="/projects/brgest.jpeg"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -97,13 +97,13 @@ const Projects = () => {
 
             <li className=" flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2">
               <Link
-                className="flex h-full flex-col rounded-2xl"
+                className="flex h-full flex-col rounded-2xl group overflow-hidden"
                 href="/blog/my-evolved-blogfolio-in-2023"
               >
-                <div className="relative w-full h-[280px] md:h-[225px]">
+                <div className="relative w-full h-[280px] md:h-[225px] overflow-hidden">
                   <Image
                     alt="Glassmorphism template"
-                    className="rounded-2xl object-cover"
+                    className="rounded-2xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     src="/projects/glass-template.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Image */}
       <div className=" p-4 w-fit h-fit rounded-full mx-auto">
         {/* Image Holder */}

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const NavBar = () => {
   const tabs = [
@@ -50,7 +51,9 @@ const NavBar = () => {
         showNav ? "translate-y-0" : "md:-translate-y-full"
       } flex justify-between items-center py-5 px-6 border-b bg-black/70 backdrop-blur-sm`}
     >
-      <div>Logo</div>
+      <div className="w-[100px] h-10 relative">
+        <Image src={"/andak.png"} alt="Logo" fill className="object-cover" />
+      </div>
 
       {/* burger */}
       <div

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const MySite = () => {
   return (
-    <section className="relative space-y-10 md:space-y-16 px-[30px] my-[100px]">
+    <section className="relative space-y-10 md:space-y-16 px-3 md:px-[30px] my-[100px]">
       {/* My Site Section */}
       <div className="space-y-4 text-balance">
         <div

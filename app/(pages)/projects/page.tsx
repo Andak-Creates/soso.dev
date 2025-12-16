@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdNavigateNext } from "react-icons/md";
 
-const page = () => {
+const Page = () => {
   const projects = [
     {
       id: 1,
@@ -30,17 +30,21 @@ const page = () => {
       </div>
 
       {/* Projects */}
-      <div className="flex flex-col gap-[50px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[50px] px-3 md:px-[30px] ">
         {projects.map((project) => (
-          <div key={project.id} className="px-10 md:px-[60px]">
+          <div key={project.id} className=" md:px-2.5 group cursor-pointer">
             {/* Image */}
-            <div className="h-[350px] sm:h-[400px] md:h-[500px] lg:h-[650px] xl:h-[800px] w-full border rounded-2xl relative overflow-hidden">
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-2xl relative overflow-hidden">
               <Image
                 src={project.image}
                 alt="project image"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
               />
+
+              <span className="text-white bg-black absolute px-5 rounded-full top-1 left-1">
+                Live
+              </span>
             </div>
 
             {/* title and description */}
@@ -50,7 +54,7 @@ const page = () => {
 
               <Link
                 href={project.link}
-                className="text-blue-700 flex flex-row gap-2"
+                className="text-blue-700 flex flex-row gap-0 hover:gap-2 w-fit"
               >
                 <small>Visit {project.title}</small>
                 <MdNavigateNext />
@@ -63,4 +67,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

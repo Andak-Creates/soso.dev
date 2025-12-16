@@ -212,7 +212,7 @@ const ConnectionsCard = () => {
                   <Image
                     className="absolute left-1/2 top-1/2 h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover"
                     alt="Connection"
-                    src="/image1.jpg"
+                    src="/avatars/image1.jpg"
                     width={100}
                     height={100}
                   />
@@ -220,71 +220,62 @@ const ConnectionsCard = () => {
               </span>
 
               {/* Desktop connection images */}
-              <span className="hidden md:block">
-                <div
-                  className="absolute w-12 h-12 p-1 z-10"
-                  style={{ top: "55%", left: "23%" }}
-                >
-                  <div className="rounded-full border border-bg-secondary relative bg-[#EDEEF0] w-12 h-12 p-1 ">
-                    <Image
-                      className="rounded-full object-cover"
-                      alt="Connection"
-                      src="/image1.jpg"
-                      fill
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute w-16 h-16 p-1 z-10"
-                  style={{ top: "53%", left: "67%" }}
-                >
-                  <div className="rounded-full border border-bg-secondary relative bg-[#EDEEF0] w-16 h-16 p-1">
-                    <Image
-                      className="rounded-full object-cover"
-                      alt="Connection"
-                      src="/image2.jpg"
-                      fill
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute w-14 h-14 p-1 z-10"
-                  style={{ top: "4%", left: "32%" }}
-                >
-                  <div className="rounded-full border border-bg-secondary relative bg-[#EDEEF0] w-14 h-14 p-1">
-                    <Image
-                      className="rounded-full object-cover"
-                      alt="Connection"
-                      src="/image3.jpg"
-                      fill
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute w-10 h-10 p-1 z-10"
-                  style={{ top: "15%", left: "78%" }}
-                >
-                  <div className="rounded-full border border-bg-secondary relative bg-[#EDEEF0] w-10 h-10 p-1">
-                    <Image
-                      className="rounded-full object-cover"
-                      alt="Connection"
-                      src="/image4.jpg"
-                      fill
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute w-9 h-9 p-1 z-10"
-                  style={{ top: "5%", left: "7%" }}
-                >
-                  <div className="rounded-full border border-bg-secondary relative bg-[#EDEEF0] w-9 h-9 p-1">
-                    <Image
-                      className="rounded-full object-cover"
-                      alt="Connection"
-                      src="/image1.jpg"
-                      fill
-                    />
-                  </div>
+              <span className="hidden lg:block">
+                <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {/* Tiny images that appear randomly with bounce effect */}
+                  {[
+                    {
+                      src: "/avatars/image1.jpg",
+                      top: "55%",
+                      left: "23%",
+                      size: "w-12 h-12",
+                      delay: "delay-[3s]",
+                    },
+                    {
+                      src: "/avatars/image2.jpg",
+                      top: "53%",
+                      left: "67%",
+                      size: "w-16 h-16",
+                      delay: "delay-[8s]",
+                    },
+                    {
+                      src: "/avatars/image3.jpg",
+                      top: "4%",
+                      left: "32%",
+                      size: "w-14 h-14",
+                      delay: "delay-[4s]",
+                    },
+                    {
+                      src: "/avatars/image4.jpg",
+                      top: "15%",
+                      left: "78%",
+                      size: "w-10 h-10",
+                      delay: "delay-[10s]",
+                    },
+                    {
+                      src: "/avatars/image1.jpg",
+                      top: "5%",
+                      left: "7%",
+                      size: "w-9 h-9",
+                      delay: "delay-[700ms]",
+                    },
+                  ].map((img, i) => (
+                    <div
+                      key={i}
+                      className={`absolute ${img.size} p-1 z-10 scale-0 group-hover:scale-100 
+          animate-none group-hover:animate-bounce-in ${img.delay}`}
+                      style={{ top: img.top, left: img.left }}
+                    >
+                      <div className="rounded-full border border-bg-secondary relative bg-[#EDEEF0] w-full h-full p-1">
+                        <Image
+                          className="rounded-full object-cover"
+                          alt="Connection"
+                          src={img.src}
+                          fill
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </span>
 

@@ -7,10 +7,10 @@ import RecentFavoriteCard from "@/components/about-page/ui/RecentFavoriteCard";
 import ScrapBookCard from "@/components/about-page/ui/ScrapBookCard";
 import StatsCard from "@/components/about-page/ui/StatsCard";
 import ConnectionsCard from "@/components/ui/ConnectionsCard";
-import DraggableImages from "@/components/ui/DraggableImages";
+import ThreeDragImages from "@/components/ui/ThreeDragImages";
 import { useEffect, useRef, useState } from "react";
 
-function page() {
+function Page() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -69,7 +69,7 @@ function page() {
           </div>
 
           {/* Draggable cards */}
-          <DraggableImages />
+          <ThreeDragImages />
         </div>
       </main>
 
@@ -113,7 +113,7 @@ function page() {
 
         {/* Grid Layout */}
         <div
-          className="relative w-full px-[30px] before:absolute before:top-0 
+          className="relative w-full px-3 md:px-[30px] before:absolute before:top-0 
         before:h-px before:bg-border-primary/50 before:-left-4 before:-right-4 
         md:before:-left-8 md:before:-right-8 lg:before:inset-x-0 after:-left-4 after:-right-4 
         md:after:-left-8 md:after:-right-8 lg:after:inset-x-0 after:absolute after:bottom-0 after:h-px 
@@ -141,4 +141,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

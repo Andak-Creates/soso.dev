@@ -5,9 +5,9 @@ import ConnectionsCard from "../ui/ConnectionsCard";
 
 const About = () => {
   return (
-    <section className="relative space-y-10 md:space-y-16 px-[30px] my-[100px]">
+    <section className="relative space-y-10 md:space-y-16 px-3 md:px-[30px] my-[100px]">
       {/* About Section */}
-      <div className="space-y-4">
+      <div className="space-y-4 ">
         <div
           className="relative w-full before:absolute before:top-0
            before:h-px before:bg-border-primary/50 before:-left-4 before:right-4
@@ -28,7 +28,7 @@ const About = () => {
         >
           <h2
             className="mx-auto max-w-lg text-balance text-center text-3xl font-medium 
-            leading-10 tracking-tight text-text-primary md:text-4xl"
+            leading-10 tracking-tight text-text-primary md:text-4xl "
           >
             Here's what sets me apart and makes me unique
           </h2>

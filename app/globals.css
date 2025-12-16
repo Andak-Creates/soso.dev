@@ -73,3 +73,29 @@ body {
 .tooltip-bounce {
   animation: tooltipBounce 0.35s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
+
+.section-divider {
+  @apply relative w-full before:absolute before:top-0 before:h-px before:bg-gray-300/50 before:-left-4 before:right-[-1rem]
+    md:before:-left-8 md:before:right-[-2rem] lg:before:inset-x-0
+    after:-left-4 after:right-[-1rem] md:after:-left-8 md:after:right-[-2rem] lg:after:inset-x-0
+    after:absolute after:bottom-0 after:h-px after:bg-gray-300/50;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3) translateY(20px);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1) translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}

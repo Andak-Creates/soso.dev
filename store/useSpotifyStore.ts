@@ -22,64 +22,50 @@ interface SpotifyRelease {
 }
 
 interface SpotifyStore {
-  // Releases
   releases: SpotifyRelease[];
   fetchReleases: () => Promise<void>;
   isLoading: boolean;
-
-  // Current track
   currentTrack: SpotifyTrack | null;
   fetchCurrentTrack: () => Promise<void>;
+  isConnected: boolean;
 }
 
 export const useSpotifyStore = create<SpotifyStore>((set) => ({
-  // Releases
   releases: [],
   isLoading: false,
+  currentTrack: null,
+  isConnected: false,
+
   fetchReleases: async () => {
     set({ isLoading: true });
     try {
       const res = await fetch("/api/spotify/releases");
       const data = await res.json();
-      set({ releases: data, isLoading: false });
+      set({ releases: Array.isArray(data) ? data : [], isLoading: false });
     } catch (err) {
       console.error("Error fetching Spotify releases:", err);
       set({ isLoading: false });
     }
   },
 
-  //   Currently playing or recently played
-  // Current track
-  currentTrack: null,
+  // ✅ Now calls your server-side API route
   fetchCurrentTrack: async () => {
     try {
-      const token = process.env.NEXT_PUBLIC_SPOTIFY_ACCESS_TOKEN;
-      if (!token) throw new Error("Spotify access token missing");
+      const res = await fetch("/api/spotify/current-track");
 
-      // Try to get currently playing track
-      let res = await fetch(
-        "https://api.spotify.com/v1/me/player/currently-playing",
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
-      let data = await res.json();
-
-      // If no active playback, get the most recently played track
-      if (!data?.item) {
-        res = await fetch(
-          "https://api.spotify.com/v1/me/player/recently-played?limit=1",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
-        data = await res.json();
-        set({ currentTrack: data.items?.[0]?.track || null });
-      } else {
-        set({ currentTrack: data.item });
+      if (res.status === 401) {
+        set({ isConnected: false, currentTrack: null });
+        return;
       }
+
+      const data = await res.json();
+      set({
+        currentTrack: data.track || null,
+        isConnected: true,
+      });
     } catch (error) {
       console.error("Error fetching current track:", error);
+      set({ currentTrack: null, isConnected: false });
     }
   },
 }));
