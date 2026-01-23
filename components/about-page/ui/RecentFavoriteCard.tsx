@@ -15,7 +15,7 @@ const RecentFavoriteCard = () => {
   const track = currentTrack;
 
   return (
-    <div className="lg:col-span-3 lg:row-span-6">
+    <div className="lg:col-span-3 lg:row-span-6" data-aos="fade-right">
       <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[300px] row-span-8 col-span-7">
         <div className="user-select-none pointer-events-none absolute inset-0 z-30 bg-linear-to-tl from-indigo-400/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
 
@@ -59,8 +59,36 @@ const RecentFavoriteCard = () => {
                   </span>
                 </p>
               ) : (
-                <p className="text-sm text-gray-400">
-                  Loading recent favorite...
+                <p className="max-h-[150px] overflow-hidden text-base text-text-secondary">
+                  <span className="line-clamp-4 text-ellipsis ">
+                    <span className="fadedText">Currently listening to</span>{" "}
+                    <a
+                      className="font-semibold group-hover:text-black"
+                      href="https://open.spotify.com/track/4Y8tHeZl44iRob0CrAvzBh?si=5c9099c77d8d45cf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Billions
+                    </a>{" "}
+                    <span className="fadedText">by</span>{" "}
+                    <a
+                      className="font-semibold group-hover:text-black"
+                      href="https://open.spotify.com/artist/408vMm7y1227ASq7GmWygZ?si=YwtmW1bTSA2ySOdn3jRegA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      sarz fit Lojay
+                    </a>{" "}
+                    <span className="fadedText">from the album</span>{" "}
+                    <a
+                      className="font-semibold group-hover:text-black"
+                      href="https://open.spotify.com/album/5h3RPX0SZMPQGz6Mwbly0h?si=85V1xKfeQKO0xx7kcUiuKQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Protect Sarz at All Cost
+                    </a>
+                  </span>
                 </p>
               )}
             </div>
@@ -74,7 +102,7 @@ const RecentFavoriteCard = () => {
               <VinylRecordSVG
                 albumCover={
                   track?.album?.images?.[0]?.url ||
-                  "https://placehold.co/200x200?text=Album"
+                  "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/b2/1b/1fb21b71-9f22-18bc-f536-1445310cdbb5/199633607318-copy-d6f0b2f3.png/800x800cc.jpg"
                 }
               />
             </div>
@@ -86,7 +114,7 @@ const RecentFavoriteCard = () => {
                 style={{
                   backgroundImage: `url("${
                     track?.album?.images?.[0]?.url ||
-                    "https://placehold.co/200x200?text=Album"
+                    "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1f/b2/1b/1fb21b71-9f22-18bc-f536-1445310cdbb5/199633607318-copy-d6f0b2f3.png/800x800cc.jpg"
                   }")`,
                 }}
               />

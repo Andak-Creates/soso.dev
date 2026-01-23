@@ -268,24 +268,33 @@ const AboutSection = () => {
             <AboutImage img="/avatars/image1.jpg" />
 
             {/* Content */}
-            <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
+            <h2
+              className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary"
+              data-aos="fade-left"
+            >
               My programming origins
             </h2>
-            <p className="mb-6 text-base leading-8 text-text-secondary">
+            <p
+              className="mb-6 text-base leading-8 text-text-secondary"
+              data-aos="fade-left"
+            >
               Sometime in 2019, I watched someone style their HTML using CSS at
               a barbing salon and I was amazed at how simple lines of code could
               transform something plain into something visually appealing. I
-              became curious and asked him to explain what he . That moment
-              sparked my interest in the world of development I knew then that I
-              wanted to learn this “coding” thing too.
+              became curious and asked him to explain what he was doing. That
+              moment sparked my interest in the world of development I knew then
+              that I wanted to learn this “coding” thing too.
             </p>
 
-            <p className="mb-6 text-base leading-8 text-text-secondary">
+            <p
+              className="mb-6 text-base leading-8 text-text-secondary"
+              data-aos="fade-left"
+            >
               I&apos;ve always had a passion for creating and bringing ideas to
               life, so the excitement to start building was immediate. Although
               it took some time before I officially began my learning journey, I
               eventually took my first real step into tech in October 2023 — and
-              I haven&apos;t looked back since.
+              I haven&apos;t looked back since then.
             </p>
           </div>
 
@@ -324,19 +333,28 @@ const AboutSection = () => {
             <AboutImage img="/avatars/image1.jpg" />
 
             {/* content */}
-            <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
+            <h2
+              className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary"
+              data-aos="fade-right"
+            >
               Life Beyond Code
             </h2>
-            <p className="mb-6 text-base leading-8 text-text-secondary">
-              outside being a front-end developer, I am also really passionate
-              about making music, which I currently also do professionally, I
-              enjoy playing basketball among other sports.
+            <p
+              className="mb-6 text-base leading-8 text-text-secondary"
+              data-aos="fade-right"
+            >
+              Outside of front-end development, I&apos;m really passionate about
+              making music, which I also do professionally. I enjoy playing
+              basketball among other sports,
             </p>
 
-            <p className="mb-6 text-base leading-8 text-text-secondary">
-              I am also big on reading books whenever I get the time to,
-              it&apos;s always nice to take a little break sit back and enjoy
-              something someone else created.
+            <p
+              className="mb-6 text-base leading-8 text-text-secondary"
+              data-aos="fade-right"
+            >
+              I love reading whenever I get the chance. It&apos;s always nice to
+              take a break, sit back, and enjoy something created by someone
+              else.
             </p>
           </div>
           <div className="hidden lg:block">
@@ -373,18 +391,27 @@ const AboutSection = () => {
             <AboutImage img="/avatars/image1.jpg" />
 
             {/* Content */}
-            <h2 className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
-              these Days
+            <h2
+              className="mb-6 w-full text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary"
+              data-aos="fade-left"
+            >
+              These Days
             </h2>
-            <p className="mb-6 text-base leading-8 text-text-secondary z-10">
+            <p
+              className="mb-6 text-base leading-8 text-text-secondary z-10"
+              data-aos="fade-left"
+            >
               Currently leading a team as a Frontend Engineer at TrueNorth
-              Solutions where we are building some pretty awesome stuffs
+              Solutions, where we&apos;re building some pretty awesome things.
             </p>
-            <p className="mb-6 text-base leading-8 text-text-secondary">
+            <p
+              className="mb-6 text-base leading-8 text-text-secondary"
+              data-aos="fade-left"
+            >
               When I&apos;m not working, you&apos;ll find me building creative
               personal projects, making music in the studio, failing
-              spectacularly at playing vidoe games like call of duty warzone or
-              hanging out with the family
+              spectacularly at video games like Call of Duty: Warzone, or
+              hanging out with the family.
             </p>
           </div>
           <div className="hidden lg:block">

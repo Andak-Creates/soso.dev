@@ -27,6 +27,7 @@ const MySite = () => {
           <h2
             className="text-center text-3xl font-medium leading-10 tracking-tighter
          text-text-primary md:mx-auto md:max-w-lg md:text-4xl"
+            data-aos="fade-up"
           >
             This is the part where I keep my music, explore && say hello
           </h2>
@@ -42,7 +43,7 @@ const MySite = () => {
       >
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {/* Speaking Card */}
-          <Link href="/speaking" className="block">
+          <Link href="/music" className="block" data-aos="fade-right">
             <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[276px]">
               <div
                 className="absolute bottom-4 right-4 z-999
@@ -659,7 +660,7 @@ const MySite = () => {
           </Link>
 
           {/* Community Wall Card */}
-          <Link href="/community-wall" className="block">
+          <Link href="/community-wall" className="block" data-aos="fade-left">
             <div
               className="group relative flex flex-col rounded-2xl border
              border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-[276px]"

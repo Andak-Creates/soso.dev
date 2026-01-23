@@ -23,13 +23,15 @@ const Page = () => {
     fetchReleases();
   }, [fetchReleases]);
 
+  console.log("Releases from store:", releases);
+
   // ✅ Filter by tab
   const filteredReleases =
     activeArtistTab === "all"
       ? releases
       : releases.filter(
           (release) =>
-            release.album_type.toLowerCase() === activeArtistTab.toLowerCase()
+            release.album_type.toLowerCase() === activeArtistTab.toLowerCase(),
         );
 
   // video
@@ -214,12 +216,6 @@ const Page = () => {
             <small className="fadedText">
               No current Data for this section
             </small>
-            <button
-              onClick={() => (window.location.href = "/api/auth/login")}
-              className="px-4 py-2 bg-green-500 text-white rounded"
-            >
-              Connect Spotify
-            </button>
           </div>
         </div>
       </div>

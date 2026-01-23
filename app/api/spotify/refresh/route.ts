@@ -14,13 +14,13 @@ export async function POST() {
 
     return NextResponse.json(
       { error: "Failed to refresh token" },
-      { status: 401 }
+      { status: 401 },
     );
   } catch (error) {
     console.error("Refresh token error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -3,8 +3,11 @@ import Link from "next/link";
 
 const ConnectionsCard = () => {
   return (
-    <div className="md:col-span-12 lg:col-span-7 lg:row-span-8">
-      <Link href="/connections" className="block">
+    <div
+      className="md:col-span-12 lg:col-span-7 lg:row-span-8"
+      data-aos="fade-left"
+    >
+      <Link href="" className="block">
         <div
           className="group relative flex flex-col rounded-2xl border
                  border-border-primary bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden
@@ -324,6 +327,7 @@ const ConnectionsCard = () => {
               <p className="mt-1 text-[#aaa]">
                 An evolving list of people I've met and those I wish to meet.
               </p>
+              <small className="fadedText">Coming Soon</small>
             </div>
           </div>
         </div>

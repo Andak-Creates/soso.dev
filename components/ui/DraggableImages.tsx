@@ -18,7 +18,7 @@ const DraggableImages = () => {
 
   const handleMouseDown = (
     e: React.MouseEvent<HTMLDivElement>,
-    index: number
+    index: number,
   ) => {
     setDraggedIndex(index);
     setOffset({
@@ -95,6 +95,7 @@ const DraggableImages = () => {
   return (
     <div
       className="my-10 relative flex flex-row justify-center h-[350px] lg:h-[400px] items-center gap-14 lg:gap-10 overflow-hidden lg:overflow-visible"
+      data-aos="fade-up"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}

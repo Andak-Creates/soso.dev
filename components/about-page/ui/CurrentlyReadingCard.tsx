@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const CurrentlyReadingCard = () => {
   return (
-    <div className="hidden lg:col-span-2 lg:col-start-11 lg:row-span-10 lg:block lg:min-h-[50px]">
+    <div
+      className="hidden lg:col-span-2 lg:col-start-11 lg:row-span-10 lg:block lg:min-h-[50px]"
+      data-aos="fade-left"
+    >
       <div className="group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white overflow-hidden h-full row-span-8 col-span-7">
         <div
           className="user-select-none pointer-events-none absolute inset-0 z-30 bg-linear-to-tl
@@ -13,7 +16,9 @@ const CurrentlyReadingCard = () => {
         <h2 className="mb-2 font-medium group-hover:text-black">
           Currently Reading
         </h2>
-        <small className="fadedText">The Vampire Lestat </small>
+        <small className="fadedText group-hover:text-[#000000e7]">
+          The Vampire Lestat{" "}
+        </small>
 
         <div className="relative h-full">
           <div

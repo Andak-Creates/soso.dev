@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
@@ -9,9 +10,16 @@ const Footer = () => {
         <div className="flex flex-row justify-between items-end">
           {/* about - thanks */}
           <div className="w-[50%]">
-            <h1 className="text-[40px]">Logo</h1>
-            <h2 className="mt-5">
-              I&apos;m Kelvin Andak - a front-end developer && music artist.
+            <div className="w-70 h-15 relative">
+              <Image
+                src="/andak.png"
+                alt=""
+                fill
+                className="absolute object-cover -bottom-2"
+              />
+            </div>
+            <h2 className="mt-2">
+              I&apos;m Kelvin Andak - a front-end engineer && music artist.
               Thanks for checking out my portfolio!
             </h2>
             <p className="mt-[30px]">© 2025 Kelvin Andak</p>
@@ -57,11 +65,11 @@ const Footer = () => {
           <div className="flex flex-col gap-4 mt-3 text-[#aaa]">
             <Link href={"/"}>Home</Link>
 
-            <Link href={"/"}>About</Link>
+            <Link href={"/about"}>About</Link>
 
-            <Link href={"/"}>Projects</Link>
+            <Link href={"/projects"}>Projects</Link>
 
-            <Link href={"/"}>Music</Link>
+            <Link href={"/music"}>Music</Link>
           </div>
         </div>
 
@@ -71,9 +79,9 @@ const Footer = () => {
           <div className="flex flex-col gap-4 mt-3 text-[#aaa]">
             <Link href={"/"}>Toolbox</Link>
 
-            <Link href={"/"}>Music</Link>
+            <Link href={"/music"}>Music</Link>
 
-            <Link href={"/"}>Community Wall</Link>
+            <Link href={"/community-wall"}>Community Wall</Link>
           </div>
         </div>
       </div>

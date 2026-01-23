@@ -16,63 +16,45 @@ interface Job {
 const experienceData: Job[] = [
   {
     id: 1,
-    company: "LogicGate",
-    period: "2022 - Present",
+    company: "Triber",
+    period: "2026 - Present",
     positions: [
-      {
-        title: "Frontend Developer III",
-        responsibilities: [
-          "I lead feature development on a team by analyzing requirements, designing solutions, and assist in evolving the frontend chapter of our organization.",
-        ],
-      },
       {
         title: "Frontend Developer II",
         responsibilities: [
-          "I joined LogicGate and immediately took charge of feature development on my team while also assisting other frontend developers in the organization.",
+          "I drive frontend feature development and support the growth of the frontend chapter, serving as Lead Frontend Engineer at one of their subsidiaries.",
+        ],
+      },
+      {
+        title: "Frontend Developer Intern I",
+        responsibilities: [
+          "I joined Triber as an intern, collaborating with and assisting frontend developers to build and maintain user-focused web applications.",
         ],
       },
     ],
   },
   {
     id: 2,
-    company: "Cognizant",
-    period: "2019 - 2021",
+    company: "Vwindi",
+    period: "2025 - present",
     positions: [
       {
-        title: "Senior Fullstack Developer",
+        title: "Founder & developer",
         responsibilities: [
-          "I designed and developed full-stack RESTful microservices using Netflix OSS, Java, Spring Boot, SQL, Angular, React, and Vue.",
-          "I led development teams, utilizing extreme programming principles such as agile, test-driven development, and paired programming.",
-          "I spearheaded the information architecture and developed a reusable UI component library for healthcare clients.",
-          "I led over 650 developers through a monthly enablement process, training them for client work on the Digital Engineering stack.",
+          "Started my own development start-up firm where we teach highend development skills, share educational resources and tips for beginners, and also build mobile and web products for public use. Some of our products are underway and we are looking to make break this year",
         ],
       },
     ],
   },
   {
     id: 3,
-    company: "projekt202",
-    period: "2018 - 2019",
+    company: "ProCodersNG",
+    period: "2024 - 2025",
     positions: [
       {
-        title: "UI Developer",
+        title: "Frontend Developer & Instructor",
         responsibilities: [
-          "I assisted in developing a reusable UI component library and worked closely with a multi-million dollar airline client to gather requirements.",
-          "My responsibility included developing solutions for enterprise clients worth millions of dollars, using Angular 7 for the frontend.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
-    company: "Major 4 Apps",
-    period: "2018 - 2019",
-    positions: [
-      {
-        title: "Founder & Developer",
-        responsibilities: [
-          "I developed custom applications for clients, designed, developed, tested, and supported mobile applications on iOS and Android platforms.",
-          "My mobile game ranked among the top 200 on the Amazon App Store.",
+          "Worked as a Front-end development instructor, teaching students responsive front end development languages & technologies while also assisting in building Projects.",
         ],
       },
     ],
@@ -110,7 +92,7 @@ export default function ExperienceTimeline() {
   }, []);
 
   return (
-    <div className="mt-[100px] mb-[150px] px-[30px]">
+    <div className="mt-[100px] mb-[150px] px-[30px]" data-aos="fade-up">
       {/* Experience Section Header */}
       <div className="relative space-y-8 text-center">
         <div className="space-y-4">
@@ -121,7 +103,10 @@ export default function ExperienceTimeline() {
              md:after:-left-8 md:after:right-8 lg:after:inset-x-0 after:absolute
               after:bottom-0 after:h-px after:bg-border-primary/50"
           >
-            <div className="text-center text-sm font-medium text-indigo-600 mt-[150px]">
+            <div
+              className="text-center text-sm font-medium text-indigo-600 mt-[150px]"
+              data-aos="zoom-in"
+            >
               <span>Experience</span>
             </div>
           </div>
@@ -134,6 +119,7 @@ export default function ExperienceTimeline() {
             <h2
               className="mx-auto max-w-lg text-balance text-3xl font-medium
              leading-10 tracking-tighter text-text-primary"
+              data-aos="fade-up"
             >
               My work history and achievements timeline.
             </h2>
@@ -201,7 +187,7 @@ export default function ExperienceTimeline() {
                             {position.responsibilities}
                           </p>
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 </div>

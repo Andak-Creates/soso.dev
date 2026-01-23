@@ -50,7 +50,7 @@ export default function AddMessageModal({
       setMessage("");
     } catch (err) {
       console.error("Error adding message:", err);
-      setError("Failed to add message. Please try again.");
+      setError("Database is currently down. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }

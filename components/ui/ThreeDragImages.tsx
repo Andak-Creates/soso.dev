@@ -18,7 +18,7 @@ const ThreeDragImages = () => {
 
   const handleMouseDown = (
     e: React.MouseEvent<HTMLDivElement>,
-    index: number
+    index: number,
   ) => {
     setDraggedIndex(index);
     setOffset({
@@ -86,6 +86,7 @@ const ThreeDragImages = () => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
+      data-aos="fade-left"
     >
       {images.map((img, index) => (
         <div

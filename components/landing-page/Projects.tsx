@@ -15,7 +15,7 @@ const Projects = () => {
           after:h-px after:bg-border-primary/50"
         >
           <div className="text-center text-sm font-medium text-indigo-600">
-            <span>Projects</span>
+            <span>Projects && case Studies</span>
           </div>
         </div>
         <div
@@ -43,10 +43,13 @@ const Projects = () => {
          after:h-px after:bg-border-primary/50"
         >
           <ul className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
-            <li className="flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2">
+            <li
+              className="flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2"
+              data-aos="fade-up"
+            >
               <Link
                 className="flex h-full flex-col rounded-2xl group overflow-hidden"
-                href="/blog/the-only-nextjs-favicon-guide-youll-need"
+                href="https://royal-cruise.vercel.app/"
               >
                 <div className="relative w-full h-[280px] md:h-[225px]  overflow-hidden">
                   <Image
@@ -69,10 +72,13 @@ const Projects = () => {
               </Link>
             </li>
 
-            <li className=" flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2">
+            <li
+              className=" flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2"
+              data-aos="fade-up"
+            >
               <Link
                 className="flex h-full flex-col rounded-2xl group overflow-hidden"
-                href="/blog/introducing-blogfolio-v5"
+                href="https://vindi-bridgedemo.netlify.app/"
               >
                 <div className="relative w-full h-[280px] md:h-[225px] overflow-hidden">
                   <Image
@@ -95,10 +101,13 @@ const Projects = () => {
               </Link>
             </li>
 
-            <li className=" flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2">
+            <li
+              className=" flex h-full flex-col rounded-3xl border border-border-primary bg-bg-primary p-2"
+              data-aos="fade-up"
+            >
               <Link
                 className="flex h-full flex-col rounded-2xl group overflow-hidden"
-                href="/blog/my-evolved-blogfolio-in-2023"
+                href="https://lorem-glass.vercel.app/"
               >
                 <div className="relative w-full h-[280px] md:h-[225px] overflow-hidden">
                   <Image

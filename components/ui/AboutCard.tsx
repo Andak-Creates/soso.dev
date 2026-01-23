@@ -3,7 +3,11 @@ import Link from "next/link";
 
 const AboutCard = () => {
   return (
-    <div className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6">
+    <div
+      className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6"
+      data-aos="fade-right"
+      data-aos-delay="300"
+    >
       <Link href="/about" className="block">
         <div
           className="group relative flex flex-col rounded-2xl border border-border-primary 

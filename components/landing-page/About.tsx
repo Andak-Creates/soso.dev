@@ -29,6 +29,7 @@ const About = () => {
           <h2
             className="mx-auto max-w-lg text-balance text-center text-3xl font-medium 
             leading-10 tracking-tight text-text-primary md:text-4xl "
+            data-aos="fade-up"
           >
             Here's what sets me apart and makes me unique
           </h2>
@@ -50,8 +51,11 @@ const About = () => {
           <ConnectionsCard />
 
           {/* Toolbox Card */}
-          <div className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7">
-            <Link href="/toolbox" className="block">
+          <div
+            className="md:col-span-7 md:row-start-1 lg:col-span-5 lg:row-span-7"
+            data-aos="fade-right"
+          >
+            <Link href="" className="block">
               <div
                 className="group relative flex flex-col rounded-2xl border border-border-primary 
               bg-bg-primary p-6 hover:bg-white hover:text-black overflow-hidden md:h-[304px] lg:h-[300px]"
@@ -94,6 +98,7 @@ const About = () => {
                   <p className="mt-1 text-[#aaa]">
                     Check out my favorite tools and spots around the web.
                   </p>
+                  <small className="fadedText">Coming Soon</small>
                 </div>
 
                 <div className="mt-10 flex items-center justify-center gap-3 transition-all duration-500 ease-in-out md:mt-12">
@@ -216,7 +221,11 @@ const About = () => {
           </div>
 
           {/* Book a Call Card */}
-          <div className="md:col-span-12 lg:col-span-7 lg:row-span-5">
+          <div
+            className="md:col-span-12 lg:col-span-7 lg:row-span-5"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
             <a
               href="https://cal.com/soso.fedev/30min"
               target="_blank"

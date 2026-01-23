@@ -3,6 +3,8 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import NewsletterSection from "@/components/music-page/NewsLetter";
+import "aos/dist/aos.css";
+import AOSProvider from "./providers/AOSProvider";
 
 export const metadata: Metadata = {
   title: "Kelvin Andak",
@@ -21,7 +23,9 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <NavBar />
-        <main className="py-24">{children}</main>
+        <main className="py-24">
+          <AOSProvider>{children}</AOSProvider>
+        </main>
         {/* Newsletter */}
         <NewsletterSection />
         <Footer />

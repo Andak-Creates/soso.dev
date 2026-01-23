@@ -8,7 +8,10 @@ const page = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Image */}
-      <div className=" p-4 w-fit h-fit rounded-full mx-auto">
+      <div
+        className=" p-4 w-fit h-fit rounded-full mx-auto "
+        data-aos="zoom-in"
+      >
         {/* Image Holder */}
         <div className="relative h-[130px] w-[130px] rounded-full overflow-hidden border-4">
           <Image
@@ -21,7 +24,7 @@ const page = () => {
       </div>
 
       {/* Welcome */}
-      <div className="px-[30px] mt-8">
+      <div className="px-[30px] mt-8" data-aos="fade-right">
         <h1
           className="mx-auto max-w-2xl text-center 
         text-4xl font-medium leading-tight tracking-tighter
@@ -31,12 +34,15 @@ const page = () => {
         </h1>
       </div>
 
-      <div className="px-[30px] mt-5 text-center text-[16px]">
+      <div
+        className="px-[30px] mt-5 text-center text-[16px]"
+        data-aos="fade-left"
+      >
         <p className="lg:w-[70%] mx-auto leading-8">
-          I&apos;m a front-end developer inlove with making music and a passion
-          for building optimized and accessible web && mobile applications. I
-          love exploring new technologies and continuously improving my skills
-          to create seamless user experiences.
+          I&apos;m a creative front-end engineer who loves making music and
+          building optimized, accessible web and mobile applications. I enjoy
+          exploring new technologies and constantly improving my skills to craft
+          seamless user experiences.
         </p>
       </div>
 

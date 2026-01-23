@@ -14,38 +14,15 @@ interface Sticker {
 }
 
 const ScrapBookCard = () => {
-  const [stickers, setStickers] = useState<Sticker[]>([
+  const [stickers] = useState<Sticker[]>([
     {
-      src: "/avatars/image1.jpg",
+      src: "/avatars/devfeststicker2.webp",
       width: 80,
       rotation: -3.85,
       x: 0,
       y: 0,
-      description: "ThatConf 2024 - Wisconsin Dells",
-    },
-    {
-      src: "/avatars/image1.jpg",
-      width: 96,
-      rotation: -2.73,
-      x: 0,
-      y: 0,
-      description: "C3 Conference - Web Development Summit",
-    },
-    {
-      src: "/avatars/image1.jpg",
-      width: 130,
-      rotation: -9.7,
-      x: 0,
-      y: 0,
-      description: "LOTR Fan Convention - Epic Adventure",
-    },
-    {
-      src: "/avatars/image1.jpg",
-      width: 160,
-      rotation: -6.83,
-      x: 0,
-      y: 0,
-      description: "CYC Meetup - Community Builders",
+      description:
+        "DevFest 2025 - Lagos Nigeria. my first ever tech event. LOL",
     },
   ]);
 
@@ -137,7 +114,10 @@ const ScrapBookCard = () => {
 
   return (
     <>
-      <div className="hidden lg:col-span-7 lg:row-span-5 lg:block overflow-hidden">
+      <div
+        className="hidden lg:col-span-7 lg:row-span-5 lg:block overflow-hidden"
+        data-aos="zoom-in"
+      >
         <div
           className="group relative flex flex-col rounded-2xl border border-border-primary
          bg-bg-primary p-6 hover:bg-white h-[220px] row-span-4 col-span-9"
@@ -146,9 +126,16 @@ const ScrapBookCard = () => {
 
           {/* Dotted background */}
           <div
-            className="absolute top-0 h-[220px] w-full overflow-hidden 
-          bg-[radial-gradient(#e5e7eb_1px,transparent_2px)] bg-size[14px_14px] 
-          mask-[radial-gradient(ellipse_80%_70%_at_50%_50%,black_40%,transparent_100%)]"
+            className="absolute top-0 left-0 h-[260px] w-full pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, #e5e7eb 1px, transparent 1px)",
+              backgroundSize: "14px 14px",
+              maskImage:
+                "radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%)",
+            }}
           />
 
           <div className="bg-secondary w-full rounded-3xl p-6 relative">
@@ -183,7 +170,7 @@ const ScrapBookCard = () => {
                       alt="Sticker"
                       width={sticker.width}
                       height={sticker.width}
-                      className="xs:max-w-none max-w-[100px] pointer-events-none"
+                      className="xs:max-w-none max-w-[100px] pointer-events-none "
                       draggable={false}
                     />
                   </div>
@@ -217,7 +204,7 @@ const ScrapBookCard = () => {
               />
             </div>
           </div>,
-          document.body
+          document.body,
         )}
 
       {/* Tooltip portal - renders outside overflow container */}
@@ -239,7 +226,7 @@ const ScrapBookCard = () => {
               <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45" />
             </div>
           </div>,
-          document.body
+          document.body,
         )}
     </>
   );

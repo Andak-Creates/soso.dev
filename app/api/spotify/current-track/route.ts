@@ -4,11 +4,11 @@ import { getSpotifyToken, refreshSpotifyToken } from "@/lib/spotify-auth";
 export async function GET() {
   try {
     let accessToken = await getSpotifyToken();
-    
+
     if (!accessToken) {
       return NextResponse.json(
         { error: "No access token available" },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -17,18 +17,18 @@ export async function GET() {
       "https://api.spotify.com/v1/me/player/currently-playing",
       {
         headers: { Authorization: `Bearer ${accessToken}` },
-      }
+      },
     );
 
     // If 401, token expired - refresh and retry
     if (res.status === 401) {
       console.log("Token expired, refreshing...");
       accessToken = (await refreshSpotifyToken()) ?? null;
-      
+
       if (!accessToken) {
         return NextResponse.json(
           { error: "Failed to refresh token" },
-          { status: 401 }
+          { status: 401 },
         );
       }
 
@@ -37,7 +37,7 @@ export async function GET() {
         "https://api.spotify.com/v1/me/player/currently-playing",
         {
           headers: { Authorization: `Bearer ${accessToken}` },
-        }
+        },
       );
     }
 
@@ -48,7 +48,7 @@ export async function GET() {
         "https://api.spotify.com/v1/me/player/recently-played?limit=1",
         {
           headers: { Authorization: `Bearer ${accessToken}` },
-        }
+        },
       );
       const data = await res.json();
       return NextResponse.json({ track: data.items?.[0]?.track || null });
@@ -62,7 +62,7 @@ export async function GET() {
         "https://api.spotify.com/v1/me/player/recently-played?limit=1",
         {
           headers: { Authorization: `Bearer ${accessToken}` },
-        }
+        },
       );
       const recentData = await res.json();
       return NextResponse.json({ track: recentData.items?.[0]?.track || null });
@@ -73,7 +73,7 @@ export async function GET() {
     console.error("Error fetching current track:", error);
     return NextResponse.json(
       { error: "Failed to fetch track" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

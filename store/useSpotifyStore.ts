@@ -39,7 +39,9 @@ export const useSpotifyStore = create<SpotifyStore>((set) => ({
   fetchReleases: async () => {
     set({ isLoading: true });
     try {
-      const res = await fetch("/api/spotify/releases");
+      const res = await fetch("/api/spotify/releases", {
+        credentials: "include",
+      });
       const data = await res.json();
       set({ releases: Array.isArray(data) ? data : [], isLoading: false });
     } catch (err) {
@@ -51,7 +53,9 @@ export const useSpotifyStore = create<SpotifyStore>((set) => ({
   // ✅ Now calls your server-side API route
   fetchCurrentTrack: async () => {
     try {
-      const res = await fetch("/api/spotify/current-track");
+      const res = await fetch("/api/spotify/current-track", {
+        credentials: "include",
+      });
 
       if (res.status === 401) {
         set({ isConnected: false, currentTrack: null });

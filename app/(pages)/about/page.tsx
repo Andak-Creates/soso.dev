@@ -45,7 +45,7 @@ function Page() {
   // Calculate ball position along the path
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden overflow-y-hidden">
       {/* Hero Section */}
       <main
         className="space-y-12 relative w-full before:absolute before:top-0
@@ -56,13 +56,17 @@ function Page() {
       >
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:justify-around lg:px-24">
           <div className="order-2 mx-auto max-w-lg lg:order-1 lg:m-0 lg:max-w-3xl lg:pr-12">
-            <div className="text-center text-sm font-medium text-indigo-600 lg:text-left">
+            <div
+              className="text-center text-sm font-medium text-indigo-600 lg:text-left"
+              data-aos="zoom-in"
+            >
               <span>Good evening!</span>
             </div>
             <h1
               className="mx-auto max-w-2xl text-balance text-center
              text-4xl font-medium leading-tight tracking-tighter text-text-primary 
              md:text-5xl lg:text-left lg:text-6xl lg:leading-16"
+              data-aos="fade-right"
             >
               I'm Kelvin, a creative frontend engineer.
             </h1>
@@ -106,7 +110,7 @@ function Page() {
              after:absolute after:bottom-0 after:h-px after:bg-border-primary/50"
           >
             <h2 className="mx-auto max-w-lg text-balance text-center text-3xl font-medium leading-10 tracking-tight text-text-primary">
-              Here's what sets me apart and makes me unique
+              A sneak Peak Into My random board, main version coming soon
             </h2>
           </div>
         </div>
