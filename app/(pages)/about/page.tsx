@@ -12,7 +12,33 @@ import { useEffect, useRef, useState } from "react";
 
 function Page() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [greeting, setGreeting] = useState("Good evening");
   const timelineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Function to get greeting based on current time
+    const getGreeting = () => {
+      const hour = new Date().getHours();
+
+      if (hour >= 5 && hour < 12) {
+        return "Good morning";
+      } else if (hour >= 12 && hour < 17) {
+        return "Good afternoon";
+      } else {
+        return "Good evening";
+      }
+    };
+
+    // Set initial greeting
+    setGreeting(getGreeting());
+
+    // Update greeting every minute
+    const greetingInterval = setInterval(() => {
+      setGreeting(getGreeting());
+    }, 60000);
+
+    return () => clearInterval(greetingInterval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,8 +68,6 @@ function Page() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate ball position along the path
-
   return (
     <div className="overflow-x-hidden overflow-y-hidden">
       {/* Hero Section */}
@@ -60,7 +84,7 @@ function Page() {
               className="text-center text-sm font-medium text-indigo-600 lg:text-left"
               data-aos="zoom-in"
             >
-              <span>Good evening!</span>
+              <span>{greeting}!</span>
             </div>
             <h1
               className="mx-auto max-w-2xl text-balance text-center

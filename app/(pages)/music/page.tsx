@@ -46,13 +46,16 @@ const Page = () => {
             Check out my music, videos, upcoming events && live performances.
           </h1>
 
-          <button
+          <Link
+            href={
+              "https://open.spotify.com/artist/0zcp4kYzMdgATEBAOaYic4?si=yrk4r3-KRGWxBahPdBiNow"
+            }
             className="px-[50px] py-2.5 
           bg-linear-to-bl from-blue-500 to-blue-950 rounded-full 
           cursor-pointer mx-auto flex my-[50px]"
           >
             Check Out My Music
-          </button>
+          </Link>
         </div>
       </div>
 

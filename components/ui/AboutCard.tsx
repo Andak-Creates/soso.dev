@@ -1,7 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const AboutCard = () => {
+  const [greeting, setGreeting] = useState("Good evening");
+
+  useEffect(() => {
+    // Function to get greeting based on current time
+    const getGreeting = () => {
+      const hour = new Date().getHours();
+
+      if (hour >= 5 && hour < 12) {
+        return "Good morning";
+      } else if (hour >= 12 && hour < 17) {
+        return "Good afternoon";
+      } else {
+        return "Good evening";
+      }
+    };
+
+    // Set initial greeting
+    setGreeting(getGreeting());
+
+    // Update greeting every minute
+    const greetingInterval = setInterval(() => {
+      setGreeting(getGreeting());
+    }, 60000);
+
+    return () => clearInterval(greetingInterval);
+  }, []);
+
   return (
     <div
       className="col-span-1 md:col-span-5 lg:col-span-5 lg:row-span-6"
@@ -56,7 +86,7 @@ const AboutCard = () => {
                 Learn more about me
               </h2>
               <p className="mb-2 text-balance pr-1 text-[#aaa] md:pr-4">
-                Good evening! <br />
+                {greeting}! <br />
                 I'm Kelvin, an experienced front-end developer.
               </p>
             </div>
