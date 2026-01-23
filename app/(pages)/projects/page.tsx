@@ -17,7 +17,7 @@ const Page = () => {
 
     {
       id: 2,
-      image: "/projects/trueNorthPic.png",
+      image: "/projects/trueNorthpic.png",
       title: "TrueNorth Solutions",
       description:
         "Developed the TrueNorth website using Next.js, implementing the design and enhancing the UI with improved responsiveness for a seamless user experience. The site is currently deployed in demo mode on Vercel, pending backend integration.",
