@@ -120,7 +120,7 @@ const Projects = () => {
                 </div>
                 <div className="my-4 flex w-full grow flex-col space-y-4 text-balance px-4">
                   <h2 className="text-lg font-semibold leading-7 tracking-tight text-slate-500">
-                    Lorem Glass • A website template
+                    Lorem Glass • Architectural website
                   </h2>
                   <p className="grow leading-7 text-text-secondary">
                     A simple glassmorphism website template built using HTML,
