@@ -4,26 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+const getGreeting = () => {
+  const hour = new Date().getHours();
+
+  if (hour >= 5 && hour < 12) {
+    return "Good morning";
+  } else if (hour >= 12 && hour < 17) {
+    return "Good afternoon";
+  } else {
+    return "Good evening";
+  }
+};
+
 const AboutCard = () => {
-  const [greeting, setGreeting] = useState("Good evening");
+  const [greeting, setGreeting] = useState(getGreeting);
 
   useEffect(() => {
-    // Function to get greeting based on current time
-    const getGreeting = () => {
-      const hour = new Date().getHours();
-
-      if (hour >= 5 && hour < 12) {
-        return "Good morning";
-      } else if (hour >= 12 && hour < 17) {
-        return "Good afternoon";
-      } else {
-        return "Good evening";
-      }
-    };
-
-    // Set initial greeting
-    setGreeting(getGreeting());
-
     // Update greeting every minute
     const greetingInterval = setInterval(() => {
       setGreeting(getGreeting());
@@ -87,14 +83,14 @@ const AboutCard = () => {
               </h2>
               <p className="mb-2 text-balance pr-1 text-[#aaa] md:pr-4">
                 {greeting}! <br />
-                I'm Kelvin, an experienced front-end developer.
+                I&apos;m Kelvin, an experienced front-end developer.
               </p>
             </div>
 
             <div className="p-2 bg-white border rounded-lg h-[500px]">
               <div className="w-40 h-[300px] bg-black p-2 rounded-lg relative shrink-0">
                 <Image
-                  src={"/avatars/image1.jpg"}
+                  src={"/myImages/party.jpeg"}
                   alt="profile image"
                   fill
                   className="object-cover rotate-6 scale-[1.1] -mt-2.5 lg:scale-[1] lg:group-hover:rotate-4 lg:group-hover:scale-[1.1] rounded-lg transition-all duration-500"

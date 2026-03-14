@@ -43,6 +43,7 @@ export const useSpotifyStore = create<SpotifyStore>((set) => ({
         credentials: "include",
       });
       const data = await res.json();
+      console.log("Store: Releases received:", Array.isArray(data) ? data.length : "error", data);
       set({ releases: Array.isArray(data) ? data : [], isLoading: false });
     } catch (err) {
       console.error("Error fetching Spotify releases:", err);

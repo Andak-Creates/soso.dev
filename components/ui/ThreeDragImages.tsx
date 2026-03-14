@@ -63,18 +63,18 @@ const ThreeDragImages = () => {
 
   const images = [
     {
-      src: "/avatars/image1.jpg",
+      src: "/myImages/tshirt.jpeg",
       className: "rotate-[-8deg] scale-[1] lg:scale-[2] lg:hover:scale-[2.2]",
       containerClass: "w-[200px] h-[300px] lg:h-[100px] lg:w-[100px]",
     },
     {
-      src: "/avatars/image2.jpg",
+      src: "/myImages/triber.jpeg",
       className:
         "rotate-[-10deg] lg:rotate-[1deg] scale-[1] lg:scale-[1.2] lg:hover:scale-[1.3]",
       containerClass: "w-[200px] h-[300px] lg:h-[200px] lg:w-[150px]",
     },
     {
-      src: "/avatars/image4.jpg",
+      src: "/myImages/portrait.jpeg",
       className: "rotate-6 scale-[1] lg:scale-[2] lg:hover:scale-[2.2]",
       containerClass: "w-[200px] h-[300px] lg:h-[100px] lg:w-[100px]",
     },

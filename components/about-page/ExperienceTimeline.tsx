@@ -162,7 +162,7 @@ export default function ExperienceTimeline() {
 
             {/* Content */}
             <div className="flex flex-col justify-between w-full ml-20 md:ml-0">
-              {experienceData.map((experience: any) => (
+              {experienceData.map((experience) => (
                 <div
                   key={experience.id}
                   className="flex flex-row md:justify-between w-full mb-15"
@@ -177,18 +177,16 @@ export default function ExperienceTimeline() {
 
                   {/* Roles */}
                   <div className="flex flex-col text-left w-full md:w-[70%]">
-                    {experience.positions.map(
-                      (position: any, index: number) => (
-                        <div key={index}>
-                          <h2 className="my-6 font-semibold text-[20px]">
-                            {position.title}
-                          </h2>
-                          <p className="fadedText">
-                            {position.responsibilities}
-                          </p>
-                        </div>
-                      ),
-                    )}
+                    {experience.positions.map((position, index) => (
+                      <div key={index}>
+                        <h2 className="my-6 font-semibold text-[20px]">
+                          {position.title}
+                        </h2>
+                        <p className="fadedText">
+                          {position.responsibilities}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}

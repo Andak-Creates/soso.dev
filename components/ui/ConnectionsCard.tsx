@@ -325,7 +325,7 @@ const ConnectionsCard = () => {
             <div className="z-20 mt-auto w-full text-balance text-center">
               <h2 className="text-base font-semibold">Connections</h2>
               <p className="mt-1 text-[#aaa]">
-                An evolving list of people I've met and those I wish to meet.
+                An evolving list of people I&apos;ve met and those I wish to meet.
               </p>
               <small className="fadedText">Coming Soon</small>
             </div>

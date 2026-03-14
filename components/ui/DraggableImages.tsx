@@ -63,30 +63,30 @@ const DraggableImages = () => {
 
   const images = [
     {
-      src: "/avatars/image1.jpg",
+      src: "/myImages/party.jpeg",
       className: "rotate-[-8deg] scale-[1] lg:scale-[2] lg:hover:scale-[2.2]",
       containerClass: "w-[200px] h-[300px] lg:h-[100px] lg:w-[100px]",
     },
     {
-      src: "/avatars/image2.jpg",
+      src: "/myImages/bball.jpeg",
       className:
         "rotate-[-10deg] lg:rotate-[-4deg] scale-[1] lg:scale-[1.2] lg:hover:scale-[1.3]",
       containerClass: "w-[200px] h-[300px] lg:h-[200px] lg:w-[150px]",
     },
     {
-      src: "/avatars/image4.jpg",
+      src: "/myImages/portrait.jpeg",
       className:
         "rotate-4 lg:rotate-2 scale-[1] lg:scale-[2] lg:hover:scale-[2.2]",
       containerClass: "w-[200px] h-[300px] lg:h-[100px] lg:w-[100px]",
     },
     {
-      src: "/avatars/image3.jpg",
+      src: "/myImages/henny.jpeg",
       className:
         "rotate-10 lg:rotate-4 scale-[1] lg:scale-[1.2] lg:hover:scale-[1.3]",
       containerClass: "w-[200px] h-[300px] lg:h-[200px] lg:w-[150px]",
     },
     {
-      src: "/avatars/image4.jpg",
+      src: "/myImages/rave.jpeg",
       className: "rotate-6 scale-[1] lg:scale-[2] lg:hover:scale-[2.2]",
       containerClass: "w-[200px] h-[300px] lg:h-[100px] lg:w-[100px]",
     },

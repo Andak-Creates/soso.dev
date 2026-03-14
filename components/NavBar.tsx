@@ -8,23 +8,15 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 const NavBar = () => {
-  const tabs = [
+  const tabs = React.useMemo(() => [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Music", href: "/music" },
-  ] as const;
-
-  type TabKey = (typeof tabs)[number]["name"];
-  const [activeTab, setActiveTab] = React.useState<TabKey>("Home");
+  ] as const, []);
 
   const pathname = usePathname();
-
-  // ✅ Set active tab based on current route
-  useEffect(() => {
-    const currentTab = tabs.find((tab) => tab.href === pathname);
-    if (currentTab) setActiveTab(currentTab.name);
-  }, [pathname]);
+  const activeTab = tabs.find((tab) => tab.href === pathname)?.name || "Home";
 
   // Scroll hide/show logic
   const [showNav, setShowNav] = useState(true);

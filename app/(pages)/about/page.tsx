@@ -10,28 +10,24 @@ import ConnectionsCard from "@/components/ui/ConnectionsCard";
 import ThreeDragImages from "@/components/ui/ThreeDragImages";
 import { useEffect, useRef, useState } from "react";
 
+const getGreeting = () => {
+  const hour = new Date().getHours();
+
+  if (hour >= 5 && hour < 12) {
+    return "Good morning";
+  } else if (hour >= 12 && hour < 17) {
+    return "Good afternoon";
+  } else {
+    return "Good evening";
+  }
+};
+
 function Page() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [greeting, setGreeting] = useState("Good evening");
+  const [greeting, setGreeting] = useState(getGreeting);
   const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Function to get greeting based on current time
-    const getGreeting = () => {
-      const hour = new Date().getHours();
-
-      if (hour >= 5 && hour < 12) {
-        return "Good morning";
-      } else if (hour >= 12 && hour < 17) {
-        return "Good afternoon";
-      } else {
-        return "Good evening";
-      }
-    };
-
-    // Set initial greeting
-    setGreeting(getGreeting());
-
     // Update greeting every minute
     const greetingInterval = setInterval(() => {
       setGreeting(getGreeting());
@@ -66,7 +62,7 @@ function Page() {
     handleScroll(); // Initial calculation
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [scrollProgress]);
 
   return (
     <div className="overflow-x-hidden overflow-y-hidden">
@@ -92,7 +88,7 @@ function Page() {
              md:text-5xl lg:text-left lg:text-6xl lg:leading-16"
               data-aos="fade-right"
             >
-              I'm Kelvin, a creative frontend engineer.
+              I&apos;m Kelvin, a creative frontend engineer.
             </h1>
           </div>
 

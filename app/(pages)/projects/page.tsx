@@ -39,12 +39,12 @@ const Page = () => {
 
     {
       id: 4,
-      image: "/projects/theScenePic.jpg",
+      image: "/projects/thescenTemplate",
       title: "TheScene",
       description:
         "A social discovery app that helps users find and attend parties based on location, preferences, and trending events. Features include personalized recommendations, ticket links, and a social feed. Currently in development, with a focus on responsive UI and seamless user experience.",
-      link: "",
-      status: "In Progress",
+      link: "https://testflight.apple.com/join/Nyu8yy6F",
+      status: "Live On Testflight",
       type: "Mobile Application",
     },
   ];

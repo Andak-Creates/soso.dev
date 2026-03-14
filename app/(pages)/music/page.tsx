@@ -52,7 +52,7 @@ const Page = () => {
             }
             className="px-[50px] py-2.5 
           bg-linear-to-bl from-blue-500 to-blue-950 rounded-full 
-          cursor-pointer mx-auto flex my-[50px]"
+          cursor-pointer mx-auto flex my-[50px] w-fit"
           >
             Check Out My Music
           </Link>

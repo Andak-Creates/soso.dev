@@ -29,7 +29,7 @@ const RecentFavoriteCard = () => {
               {track ? (
                 <p className="max-h-[150px] overflow-hidden text-base text-text-secondary">
                   <span className="line-clamp-4 text-ellipsis ">
-                    <span className="fadedText">I'm listening to</span>{" "}
+                    <span className="fadedText">I&apos;m listening to</span>{" "}
                     <a
                       className="font-semibold group-hover:text-black"
                       href={track.external_urls.spotify}

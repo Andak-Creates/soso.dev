@@ -66,7 +66,7 @@ const Projects = () => {
                   </h2>
                   <p className="grow leading-7 text-text-secondary">
                     An interactive cruise ship website built using Lovable ai as
-                    an experimentation to test the ai's capabilities
+                    an experimentation to test the ai&apos;s capabilities
                   </p>
                 </div>
               </Link>

@@ -9,6 +9,7 @@ const AboutSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
   const [svgHeight, setSvgHeight] = useState(1787);
+  const [ballPosition, setBallPosition] = useState({ x: 145, y: 0 });
 
   useEffect(() => {
     // Measure content height and set SVG height
@@ -57,17 +58,18 @@ const AboutSection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate ball position along the path
-  const getBallPosition = () => {
-    if (!pathRef.current) return { x: 145, y: 0 };
+  useEffect(() => {
+    if (!pathRef.current) return;
 
-    const pathLength = pathRef.current.getTotalLength();
-    const point = pathRef.current.getPointAtLength(pathLength * scrollProgress);
+    try {
+      const pathLength = pathRef.current.getTotalLength();
+      const point = pathRef.current.getPointAtLength(pathLength * scrollProgress);
+      setBallPosition({ x: point.x, y: point.y });
+    } catch (e) {
+      console.error("Error calculating ball position:", e);
+    }
+  }, [scrollProgress]);
 
-    return { x: point.x, y: point.y };
-  };
-
-  const ballPosition = getBallPosition();
 
   return (
     <div className="relative space-y-8 text-center px-[30px] mt-[30px] mb-[100px]">
@@ -88,7 +90,7 @@ const AboutSection = () => {
          after:right-4 md:after:-left-8 md:after:right-8 lg:after:inset-x-0 after:absolute after:bottom-0 after:h-px after:bg-border-primary/50"
         >
           <h2 className="mx-auto max-w-xl text-balance text-3xl font-medium leading-10 tracking-tighter text-text-primary">
-            Here's a quick intro about me and what I love to do
+            Here&apos;s a quick intro about me and what I love to do
           </h2>
         </div>
       </div>
@@ -265,7 +267,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 gap-8 py-12 mx:pr-12 lg:grid-cols-2 lg:items-center lg:justify-between lg:py-20 xl:py-32">
           <div className="flex flex-col items-center text-left lg:order-2 lg:items-start">
             {/* Images */}
-            <AboutImage img="/avatars/image1.jpg" />
+            <AboutImage img="/myImages/myFace.jpeg" />
 
             {/* Content */}
             <h2
@@ -318,7 +320,7 @@ const AboutSection = () => {
               <Image
                 className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[-8deg] rounded-lg object-cover shadow"
                 alt="A headshot"
-                src="/avatars/image1.jpg"
+                src="/myImages/myFace.jpeg"
                 width={180}
                 height={270}
               />
@@ -330,7 +332,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:justify-between lg:pl-12 lg:mb-[140px]">
           <div className="flex flex-col items-center text-left lg:items-start">
             {/* Image */}
-            <AboutImage img="/avatars/image1.jpg" />
+            <AboutImage img="/myImages/studio.jpeg" />
 
             {/* content */}
             <h2
@@ -376,7 +378,7 @@ const AboutSection = () => {
               <Image
                 className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow"
                 alt="Speaking at C3 Conf!"
-                src="/avatars/image2.jpg"
+                src="/myImages/studio.jpeg"
                 width={180}
                 height={270}
               />
@@ -388,7 +390,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 gap-8 pr-12 lg:grid-cols-2 lg:items-center lg:justify-between">
           <div className="flex flex-col items-center text-left lg:order-2 lg:items-start">
             {/* Image */}
-            <AboutImage img="/avatars/image1.jpg" />
+            <AboutImage img="/myImages/henny.jpeg" />
 
             {/* Content */}
             <h2
@@ -433,7 +435,7 @@ const AboutSection = () => {
               <Image
                 className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[-8deg] rounded-lg object-cover shadow"
                 alt="A headshot"
-                src="/avatars/image1.jpg"
+                src="/myImages/henny.jpeg"
                 width={180}
                 height={270}
               />

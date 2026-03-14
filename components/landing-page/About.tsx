@@ -31,7 +31,7 @@ const About = () => {
             leading-10 tracking-tight text-text-primary md:text-4xl "
             data-aos="fade-up"
           >
-            Here's what sets me apart and makes me unique
+            Here&apos;s what sets me apart and makes me unique
           </h2>
         </div>
       </div>
@@ -276,7 +276,7 @@ const About = () => {
                       Book a call with me
                     </h2>
                     <p className="mb-2 text-[#aaa]">
-                      I'd love to chat even if there's no agenda!
+                      I&apos;d love to chat even if there&apos;s no agenda!
                     </p>
                   </div>
 

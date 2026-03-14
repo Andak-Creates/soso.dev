@@ -6,6 +6,7 @@ export async function GET() {
     let accessToken = await getSpotifyToken();
 
     if (!accessToken) {
+      console.log("Current Track API: No access token available");
       return NextResponse.json(
         { error: "No access token available" },
         { status: 401 },
@@ -55,9 +56,11 @@ export async function GET() {
     }
 
     const data = await res.json();
+    console.log("Current Track API: Fetched data for", data?.item?.name || "nothing currently playing");
 
     // If nothing playing, get recently played
     if (!data?.item) {
+      console.log("Current Track API: Fetching recently played...");
       res = await fetch(
         "https://api.spotify.com/v1/me/player/recently-played?limit=1",
         {
@@ -65,6 +68,7 @@ export async function GET() {
         },
       );
       const recentData = await res.json();
+      console.log("Current Track API: Recent track:", recentData.items?.[0]?.track?.name || "none");
       return NextResponse.json({ track: recentData.items?.[0]?.track || null });
     }
 
