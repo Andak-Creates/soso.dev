@@ -44,7 +44,14 @@ const NavBar = () => {
       } flex justify-between items-center py-5 px-6 border-b bg-black/70 backdrop-blur-sm`}
     >
       <div className="w-[100px] h-10 relative">
-        <Image src={"/andak.png"} alt="Logo" fill className="object-cover" />
+        <Image
+          src={"/andak.png"}
+          alt="Logo"
+          fill
+          priority
+          sizes="100px"
+          className="object-cover"
+        />
       </div>
 
       {/* burger */}

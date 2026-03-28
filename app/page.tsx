@@ -18,6 +18,8 @@ const page = () => {
             src={"/myImages/whiteProfile.jpeg"}
             alt="profile Image"
             fill
+            priority
+            sizes="130px"
             className="object-cover rounded-full"
           />
         </div>

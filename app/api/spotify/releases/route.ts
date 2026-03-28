@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { getSpotifyToken, getSpotifyClientToken } from "@/lib/spotify-auth";
 
@@ -25,10 +26,19 @@ export async function GET() {
       },
     );
 
+    if (!res.ok) {
+      const raw = await res.text();
+      console.error("Releases API: Bad response:", res.status, raw);
+      return NextResponse.json(
+        { error: "Spotify request failed", raw },
+        { status: res.status },
+      );
+    }
+
     const data = await res.json();
     console.log("Releases API: Spotify response status:", res.status);
     if (data.error) console.error("Releases API: Spotify error:", data.error);
-    
+
     return NextResponse.json(data.items || []);
   } catch (error) {
     console.error("Error fetching releases:", error);

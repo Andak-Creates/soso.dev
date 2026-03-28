@@ -57,6 +57,8 @@ const Projects = () => {
                     className="rounded-2xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     src="/projects/cruise-ship.jpeg"
                     fill
+                    priority
+                    loading="eager"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
@@ -86,6 +88,8 @@ const Projects = () => {
                     className="rounded-2xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     src="/projects/brgest.jpeg"
                     fill
+                    priority
+                    loading="eager"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>

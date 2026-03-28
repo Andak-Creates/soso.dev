@@ -218,6 +218,7 @@ const ConnectionsCard = () => {
                     src="/avatars/image1.jpg"
                     width={100}
                     height={100}
+                    priority
                   />
                 </div>
               </span>
@@ -275,6 +276,7 @@ const ConnectionsCard = () => {
                           alt="Connection"
                           src={img.src}
                           fill
+                          sizes="64px"
                         />
                       </div>
                     </div>
@@ -293,6 +295,7 @@ const ConnectionsCard = () => {
                     alt="Connection"
                     src="/avatars/image1.jpg"
                     fill
+                    sizes="40px"
                   />
                 </div>
                 <div className="rounded-full border border-bg-secondary bg-[#EDEEF0] w-12 h-12 p-1 absolute bottom-20 left-14 md:left-52">
@@ -301,6 +304,7 @@ const ConnectionsCard = () => {
                     alt="Connection"
                     src="/avatars/image2.jpg"
                     fill
+                    sizes="48px"
                   />
                 </div>
                 <div className="rounded-full border border-bg-secondary bg-[#EDEEF0] w-14 h-14 p-1 absolute right-16 top-4 md:right-52">
@@ -309,6 +313,7 @@ const ConnectionsCard = () => {
                     alt="Connection"
                     src="/avatars/image3.jpg"
                     fill
+                    sizes="56px"
                   />
                 </div>
                 <div className="rounded-full border border-bg-secondary  bg-[#EDEEF0] w-11 h-11 p-1 absolute bottom-20 right-4 md:right-12">
@@ -317,6 +322,7 @@ const ConnectionsCard = () => {
                     alt="Connection"
                     src="/avatars/image4.jpg"
                     fill
+                    sizes="44px"
                   />
                 </div>
               </span>

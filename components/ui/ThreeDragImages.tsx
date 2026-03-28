@@ -106,6 +106,7 @@ const ThreeDragImages = () => {
             src={img.src}
             alt="images"
             fill
+            sizes="(max-width: 768px) 200px, 150px"
             className={`object-cover rounded-lg ${img.className}`}
             draggable={false}
           />

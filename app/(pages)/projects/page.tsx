@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { MdNavigateNext } from "react-icons/md";
@@ -47,6 +48,36 @@ const Page = () => {
       status: "Live On Testflight",
       type: "Mobile Application",
     },
+    {
+      id: 5,
+      image: "/projects/thesceneScreenShot.png",
+      title: "TheScene Website",
+      description:
+        "A promotional website for TheScene app, built with Next.js to showcase the app's features, user testimonials, and download links. The site is designed to attract potential users and provide information about the app's functionality and benefits. Currently live on Vercel.",
+      link: "https://thescene.vercel.app",
+      status: "Live",
+      type: "Web Application",
+    },
+    {
+      id: 6,
+      image: "/projects/privCapScreenShot.png",
+      title: "PrivCap Hub | Private FMI",
+      description:
+        "A private Financial Market Infrastructure (FMI) platform designed to provide exclusive insights and data to financial professionals. The platform offers real-time market analysis, personalized dashboards, and secure access to sensitive financial information. Currently live with access granted to High-Net-Worth Individuals (HNWIs) only, with a focus on robust security measures and user-friendly interface.",
+      link: "",
+      status: "Live",
+      type: "Web Application",
+    },
+    {
+      id: 7,
+      image: "/projects/truenorthScreenShot.png",
+      title: "TrueNorth Solutions Website (redesign)",
+      description:
+        "A redesigned version of the TrueNorth Solutions website, built with Next.js to enhance user experience and visual appeal. The new design focuses on improved responsiveness, intuitive navigation, and a modern aesthetic. Currently deployed in demo mode on Vercel.",
+      link: "https://true-north-nine.vercel.app/",
+      status: "Live",
+      type: "Web Application",
+    },
   ];
 
   return (
@@ -59,14 +90,22 @@ const Page = () => {
 
       {/* Projects */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[50px] px-3 md:px-[30px] ">
-        {projects.map((project) => (
-          <div key={project.id} className=" md:px-2.5 group cursor-pointer">
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className=" md:px-2.5 group cursor-pointer"
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos-delay={index % 2 === 0 ? 0 : 500}
+            data-aos-duration="800"
+          >
             {/* Image */}
             <div className="h-[300px] sm:h-[350px] md:h-[400px] w-full rounded-2xl relative overflow-hidden">
               <Image
                 src={project.image}
                 alt="project image"
                 fill
+                priority={index < 2}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
               />
 
@@ -85,7 +124,12 @@ const Page = () => {
 
               <Link
                 href={project.link}
-                className="text-blue-700 flex flex-row gap-0 hover:gap-2 w-fit"
+                className={clsx(
+                  "text-blue-700 flex flex-row gap-0 hover:gap-2 w-fit",
+                  {
+                    "pointer-events-none opacity-50": !project.link,
+                  },
+                )}
               >
                 <small>Visit {project.title}</small>
                 <MdNavigateNext />

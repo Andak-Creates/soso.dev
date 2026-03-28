@@ -93,6 +93,8 @@ const AboutCard = () => {
                   src={"/myImages/party.jpeg"}
                   alt="profile image"
                   fill
+                  priority
+                  sizes="160px"
                   className="object-cover rotate-6 scale-[1.1] -mt-2.5 lg:scale-[1] lg:group-hover:rotate-4 lg:group-hover:scale-[1.1] rounded-lg transition-all duration-500"
                 />
               </div>

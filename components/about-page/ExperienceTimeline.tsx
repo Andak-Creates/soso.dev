@@ -154,6 +154,8 @@ export default function ExperienceTimeline() {
                     src="/avatars/image1.jpg"
                     alt="Profile"
                     fill
+                    priority
+                    sizes="40px"
                     className="object-cover"
                   />
                 </div>

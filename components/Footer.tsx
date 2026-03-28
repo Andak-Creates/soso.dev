@@ -15,6 +15,7 @@ const Footer = () => {
                 src="/andak.png"
                 alt=""
                 fill
+                sizes="280px"
                 className="absolute object-cover -bottom-2"
               />
             </div>
