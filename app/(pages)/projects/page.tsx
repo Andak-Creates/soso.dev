@@ -17,6 +17,28 @@ const Page = () => {
     },
 
     {
+      id: 5,
+      image: "/projects/thesceneScreenShot.png",
+      title: "TheScene Website",
+      description:
+        "A Web Version for TheScene app, built with Next.js to let users browse events and purchase tickets that get sent to their email address, showcasing the app's features, user testimonials, and download links. The site is designed to boost ticket sales and attract users as well as provide information about the app's functionality and benefits.",
+      link: "https://thesceneapp.online",
+      status: "Live",
+      type: "Web Application",
+    },
+
+    {
+      id: 4,
+      image: "/projects/app-thumb.jpeg",
+      title: "TheScene",
+      description:
+        "A social discovery app that helps users find and attend parties based on location, preferences, and trending events. Features include personalized recommendations, ticket links, and a social feed. Currently in development, with a focus on responsive UI and seamless user experience.",
+      link: "https://apps.apple.com/ng/app/thescene-nightlife-discovery/id6760138122",
+      status: "Live",
+      type: "Mobile Application",
+    },
+
+    {
       id: 2,
       image: "/projects/trueNorthpic.png",
       title: "TrueNorth Solutions",
@@ -28,37 +50,6 @@ const Page = () => {
     },
 
     {
-      id: 3,
-      image: "/projects/deckedoutThumb.jpg",
-      title: "Decks Out",
-      description:
-        "A mobile party card game app currently in testing on TestFlight. The app features multiple interactive game modes, including Truth or Dare, Never Have I Ever, Do or Drink, Adult Charades, and Ice Breaker Roulette, organized into themed categories like Mild Mischief, Risky Business, and Sin City. Designed for smooth interactions, intuitive UI, and engaging group play.",
-      link: "",
-      status: "testing Phase",
-      type: "Mobile Application",
-    },
-
-    {
-      id: 4,
-      image: "/projects/thescenTemplate",
-      title: "TheScene",
-      description:
-        "A social discovery app that helps users find and attend parties based on location, preferences, and trending events. Features include personalized recommendations, ticket links, and a social feed. Currently in development, with a focus on responsive UI and seamless user experience.",
-      link: "https://testflight.apple.com/join/Nyu8yy6F",
-      status: "Live On Testflight",
-      type: "Mobile Application",
-    },
-    {
-      id: 5,
-      image: "/projects/thesceneScreenShot.png",
-      title: "TheScene Website",
-      description:
-        "A promotional website for TheScene app, built with Next.js to showcase the app's features, user testimonials, and download links. The site is designed to attract potential users and provide information about the app's functionality and benefits. Currently live on Vercel.",
-      link: "https://thescene.vercel.app",
-      status: "Live",
-      type: "Web Application",
-    },
-    {
       id: 6,
       image: "/projects/privCapScreenShot.png",
       title: "PrivCap Hub | Private FMI",
@@ -67,6 +58,16 @@ const Page = () => {
       link: "",
       status: "Live",
       type: "Web Application",
+    },
+    {
+      id: 3,
+      image: "/projects/deckedoutThumb.jpg",
+      title: "Decks Out",
+      description:
+        "A mobile party card game app currently in testing on TestFlight. The app features multiple interactive game modes, including Truth or Dare, Never Have I Ever, Do or Drink, Adult Charades, and Ice Breaker Roulette, organized into themed categories like Mild Mischief, Risky Business, and Sin City. Designed for smooth interactions, intuitive UI, and engaging group play.",
+      link: "",
+      status: "testing Phase",
+      type: "Mobile Application",
     },
     {
       id: 7,
