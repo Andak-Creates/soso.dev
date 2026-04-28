@@ -5,17 +5,7 @@ import { MdNavigateNext } from "react-icons/md";
 
 const Page = () => {
   const projects = [
-    {
-      id: 1,
-      image: "/projects/triberPic.png",
-      title: "The Triber Platform",
-      description:
-        "Contributed to the Triber platform as a Frontend Engineering Intern, gaining hands-on exposure to the development workflow, participating in feature testing, and supporting the team throughout the product development lifecycle.",
-      link: "https://thetriberplatform.com/",
-      status: "Live",
-      type: "Web Application",
-    },
-
+    // TheSceneWeb
     {
       id: 5,
       image: "/projects/thesceneScreenShot.png",
@@ -27,10 +17,11 @@ const Page = () => {
       type: "Web Application",
     },
 
+    // TheScene App
     {
       id: 4,
       image: "/projects/app-thumb.jpeg",
-      title: "TheScene",
+      title: "TheScene - Nightlife Discovery App",
       description:
         "A social discovery app that helps users find and attend parties based on location, preferences, and trending events. Features include personalized recommendations, ticket links, and a social feed. Currently in development, with a focus on responsive UI and seamless user experience.",
       link: "https://apps.apple.com/ng/app/thescene-nightlife-discovery/id6760138122",
@@ -38,6 +29,31 @@ const Page = () => {
       type: "Mobile Application",
     },
 
+    // Triber Platform
+    {
+      id: 1,
+      image: "/projects/triberPic.png",
+      title: "The Triber Platform",
+      description:
+        "Contributed to the Triber platform as a Frontend Engineering Intern, gaining hands-on exposure to the development workflow, participating in feature testing, and supporting the team throughout the product development lifecycle.",
+      link: "https://thetriberplatform.com/",
+      status: "Live",
+      type: "Web Application",
+    },
+
+    // Bonita
+    {
+      id: 9,
+      image: "/projects/bonita.jpeg",
+      title: "Bonita | Skincare Store",
+      description:
+        "A e-commerce platform designed to help users find and purchase skincare products based on their skin type and concerns. Features include personalized recommendations, and a seamless user experience.",
+      link: "https://bonita-omega.vercel.app/",
+      status: "Demo",
+      type: "Web Application",
+    },
+
+    // TrueNorth
     {
       id: 2,
       image: "/projects/trueNorthpic.png",
@@ -49,6 +65,7 @@ const Page = () => {
       type: "Web Application",
     },
 
+    // PrivCap Hub
     {
       id: 6,
       image: "/projects/privCapScreenShot.png",
@@ -59,10 +76,12 @@ const Page = () => {
       status: "Live",
       type: "Web Application",
     },
+
+    // Decks Out
     {
       id: 3,
       image: "/projects/deckedoutThumb.jpg",
-      title: "Decks Out",
+      title: "Decked Out",
       description:
         "A mobile party card game app currently in testing on TestFlight. The app features multiple interactive game modes, including Truth or Dare, Never Have I Ever, Do or Drink, Adult Charades, and Ice Breaker Roulette, organized into themed categories like Mild Mischief, Risky Business, and Sin City. Designed for smooth interactions, intuitive UI, and engaging group play.",
       link: "",
@@ -76,7 +95,7 @@ const Page = () => {
       description:
         "A redesigned version of the TrueNorth Solutions website, built with Next.js to enhance user experience and visual appeal. The new design focuses on improved responsiveness, intuitive navigation, and a modern aesthetic. Currently deployed in demo mode on Vercel.",
       link: "https://true-north-nine.vercel.app/",
-      status: "Live",
+      status: "Demo",
       type: "Web Application",
     },
   ];

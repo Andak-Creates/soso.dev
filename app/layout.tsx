@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased min-h-screen bg-linear-to-b from-black  to-blue-950 bg-no-repeat bg-cover`}
+        className={` antialiased min-h-screen bg-linear-to-b from-black  to-blue-950 bg-no-repeat bg-cover overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
         <NavBar />
